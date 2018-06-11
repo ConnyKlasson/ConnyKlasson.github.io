@@ -7,7 +7,6 @@ let bNyttSpel;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
-//let nyttSlagPressed = false;
 
 function setup() {
   createCanvas (600, 700);
@@ -51,10 +50,6 @@ function setup() {
   nyttSpel();
 }
 
-//function myFunction() {
-//    setTimeout(nyttSlag, 1000);
-//}
-
 function nyttSlag(e){
 
   if (slag < 3){
@@ -76,14 +71,12 @@ function nyttSlag(e){
     }else if (slag == 2){
       bNyttSlag.html("Slag 3");
     }else if (slag == 3){
-      //bNyttSlag.hide();
       bNyttSlag.html("Klicka på önskad poäng")
       for (let i = 0; i < antalTärningar; i++){
         sparaKnappar[i].elt.firstElementChild.disabled = true;
       }
     }
   }
-  //return false;
   e.preventDefault();
 }
 
@@ -117,7 +110,6 @@ function mouseReleased(){
       slag = 3;
     }
   }
-  //return false;
 }
 
 function summera(){
@@ -177,7 +169,7 @@ function nyttSpel(){
     textAlign(LEFT);
     textSize(20);
     text(texter[j], x + 5 , y + 25);
-    
+
     resultatRad[j].resultat = 0;
     resultatRad[j].klar = false;
     resultatRad[j].rita();
