@@ -177,7 +177,9 @@ function nyttSpel(){
     textAlign(LEFT);
     textSize(20);
     text(texter[j], x + 5 , y + 25);
-
+    
+    resultatRad[j].resultat = 0;
+    resultatRad[j].klar = false;
     resultatRad[j].rita();
    }
 }
