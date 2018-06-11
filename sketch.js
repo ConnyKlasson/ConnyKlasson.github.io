@@ -14,11 +14,17 @@ function setup() {
   background(0,100,0);
   noLoop();
 
+  textAlign(TOP,LEFT);
+  textSize(24);
+  fill(255);
+  text("YATZY La Liga training camp", 235, 50);
+
+
   let x, y;
 
   for (let i = 0; i < antalTärningar; i++){
     x = 235 + (75 * i);
-    y = 60
+    y = 100;
 
     tärningar[i] = new tärning(x,y);
 
@@ -36,11 +42,11 @@ function setup() {
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
-  bNyttSlag.elt.style = "position: absolute; left: 260px; top: 175px; display: block;width:260px;height:50px;font-size: 20px";
+  bNyttSlag.elt.style = "position: absolute; left: 260px; top: 225px; display: block;width:260px;height:50px;font-size: 20px";
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 320px; top: 300px; display: block;width:130px;height:40px;font-size: 20px";
+  bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
 
   nyttSpel();
 }
