@@ -4,7 +4,9 @@ function resultatRuta(x, y, rad){
   this.höjd = 35;
   this.bredd = 50;
   this.resultat = 0;
+  let resultatText;
   this.klar = false;
+  this.bonusRäkning = 0;
 
   this.rita = function(){
     stroke(0);
@@ -14,16 +16,49 @@ function resultatRuta(x, y, rad){
       fill(255);
     }
     rect(this.x, this.y, this.bredd, this.höjd);
+
+    if (rad < 7){
+      noStroke();
+      fill(255);
+      if (rad == 6){
+        fill(200);
+      }
+      rect(this.x-45, this.y+1, this.bredd-5, this.höjd-2);
+      textSize(20);
+      textAlign(RIGHT);
+      if (this.bonusRäkning > -1){
+        fill(0);
+      }else{
+        fill(255, 0, 0);
+      }
+      text(this.bonusRäkning, this.x-5, this.y + 27);
+    }
+
+
     if (this.klar){
       fill(0);
-      textSize(18);
+      textSize(22);
     }else{
-      textSize(16);
+      textSize(20);
       fill(255, 0, 0);
     }
     noStroke();
     textAlign(RIGHT);
-    text(this.resultat, this.x + 40, this.y + 25);
+    if (this.resultat == 0){
+      resultatText = "";
+      if (this.klar){
+        resultatText = "---";
+      }
+      if (rad == 6 || rad == 17){
+        resultatText = 0;
+      }
+      if (rad == 7){
+        resultatText = "";
+      }
+    }else{
+      resultatText = this.resultat;
+    }
+    text(resultatText, this.x + 40, this.y + 27);
   }
 }
 
@@ -34,6 +69,11 @@ fyllPrel = function(){
     prelResultat[k] = 0;
     if (!resultatRad[k].klar){
       resultatRad[k].resultat = 0;
+
+      if (k < 6){
+        resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
+      }
+
       resultatRad[k].rita();
     }
   }
@@ -136,6 +176,7 @@ fyllPrel = function(){
   for (j = 0; j < 18; j++){
       if (prelResultat[j] > 0 && !resultatRad[j].klar){
         resultatRad[j].resultat = prelResultat[j];
+        resultatRad[j].bonusRäkning = resultatRad[j].bonusRäkning + prelResultat[j];
         resultatRad[j].rita();
       }
   }

@@ -2,15 +2,15 @@ function tärning(x, y){
   this.x = x;
   this.y = y;
   this.prickar = 0;
-  this.sparad = false;
 
   this.rulla = function(){
     this.prickar = floor(random(1,7));
   }
 
   this.rita = function(){
-    r = 25;
-    a = r - 5;
+    let time = 2000;
+    let r = 25;
+    let a = r - 5;
     fill(255);
     noStroke();
     //rectMode(CENTER);

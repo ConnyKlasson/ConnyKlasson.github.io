@@ -7,22 +7,23 @@ let bNyttSpel;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
+let bonusRäkning = [];
 
 function setup() {
-  createCanvas (600, 700);
+  createCanvas (640, 680);
   background(0,100,0);
   noLoop();
 
   textAlign(TOP,LEFT);
   textSize(24);
   fill(255);
-  text("YATZY La Liga training camp", 235, 50);
+  text("YATZY La Liga training camp", 275, 45);
 
 
   let x, y;
 
   for (let i = 0; i < antalTärningar; i++){
-    x = 235 + (75 * i);
+    x = 275 + (75 * i);
     y = 100;
 
     tärningar[i] = new tärning(x,y);
@@ -34,18 +35,18 @@ function setup() {
   }
 
   for (let j = 0; j < 18; j++){
-    x = 25 + 110;
+    x = 45 + 110;
     y = 25 + (35 * j);
     resultatRad[j] = new resultatRuta(x, y, j);
   }
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
-  bNyttSlag.elt.style = "position: absolute; left: 260px; top: 225px; display: block;width:260px;height:50px;font-size: 20px";
+  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 225px; display: block;width:260px;height:50px;font-size: 22px";
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
+  bNyttSpel.elt.style = "position: absolute; left: 360px; top: 350px; display: block;width:130px;height:50px;font-size: 22px";
 
   nyttSpel();
 }
@@ -81,7 +82,6 @@ function nyttSlag(e){
 }
 
 function mouseReleased(){
-
   let rad = resultatTräff();
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
       resultatRad[rad].klar = true;
@@ -95,6 +95,9 @@ function mouseReleased(){
     for (let j = 0; j < 18; j++){
       if (!resultatRad[j].klar){
         resultatRad[j].resultat = 0;
+        if (j < 6){
+          resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
+        }
       }else{
         klara ++;
       }
@@ -115,14 +118,18 @@ function mouseReleased(){
 function summera(){
   let summa = 0;
   let bonusKlar = 0;
+  let bonusRäkningSumma = 0;
   for (let i = 0; i < 6; i++){
 
     if (resultatRad[i].klar){
       summa = summa + resultatRad[i].resultat;
       bonusKlar ++;
     }
+    bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
+
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
+    resultatRad[6].bonusRäkning = bonusRäkningSumma;
     resultatRad[6].rita();
 
     if (bonusKlar == 6){
@@ -133,6 +140,7 @@ function summera(){
     resultatRad[7].klar = true;
     resultatRad[7].rita();
   }
+
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
     summa = summa + resultatRad[j].resultat;
@@ -159,16 +167,26 @@ function nyttSpel(){
   }
 
   for (let j = 0; j < 18; j++){
-    let x = 25;
     let y = 25 + (35 * j);
     stroke(0);
-    fill(255);
-    rect(x, y, 110, 35);
+    if (j == 6 || j == 7 || j == 17){
+      fill(200);
+    }else{
+      fill(255);
+    }
+    rect(25, y, 130, 35);
     noStroke();
     fill(0);
     textAlign(LEFT);
     textSize(20);
-    text(texter[j], x + 5 , y + 25);
+    text(texter[j], 30 , y + 25);
+
+    if (j < 6){
+      resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
+    }
+    if (j == 6){
+      resultatRad[j].bonusRäkning = -63;
+    }
 
     resultatRad[j].resultat = 0;
     resultatRad[j].klar = false;
