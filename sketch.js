@@ -159,9 +159,9 @@ function summera(){
 }
 
 function nyttSpel(){
-  let texter = ["Ettor", "TvÃ¥or", "Treor", "Fyror", "Femmor", "Sexor",
-   "Summa:", "Bonus", "Ett par", "TvÃ¥ par", "Tretal", "Fyrtal",
-   "Liten stege", "Stor stege", "KÃ¥k", "Chans", "Yatzy", "Summa:"];
+  let texter = ["Ettor", "Tvåor", "Treor", "Fyror", "Femmor", "Sexor",
+   "Summa:", "Bonus", "Ett par", "Två par", "Tretal", "Fyrtal",
+   "Liten stege", "Stor stege", "Kåk", "Chans", "Yatzy", "Summa:"];
 
   slag = 0;
   bNyttSlag.html("Slag 1");
