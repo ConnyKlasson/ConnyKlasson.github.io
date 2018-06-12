@@ -190,10 +190,10 @@ function nyttSpel(){
     text(texter[j], 30 , y + 25);
 
     if (j < 6){
-      resultatRad[j].bonusRÃ¤kning = ((j + 1) * 3) * -1;
+      resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
     }
     if (j == 6){
-      resultatRad[j].bonusRÃ¤kning = -63;
+      resultatRad[j].bonusRäkning = -63;
     }
 
     resultatRad[j].resultat = 0;
