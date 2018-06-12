@@ -10,7 +10,7 @@ let slag;
 //let nyttSlagPressed = false;
 
 function preload() {
-  hdbimg = loadImage('HappyDuckBar.jpg');
+  hdbimg = loadImage("HappyDuckBar.jpg");
 }
 
 function setup() {
@@ -52,7 +52,7 @@ function setup() {
   bNyttSpel.mouseReleased(nyttSpel);
   bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
 
-image(hdbimg, 300, 300)
+  image(hdbimg, 300, 300);
 
   nyttSpel();
 }
