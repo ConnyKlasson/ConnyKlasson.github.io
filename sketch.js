@@ -23,7 +23,6 @@ function setup() {
   fill(255);
   text("YATZY La Liga training camp", 235, 50);
 
-
   let x, y;
 
   for (let i = 0; i < antalTärningar; i++){
@@ -52,7 +51,8 @@ function setup() {
   bNyttSpel.mouseReleased(nyttSpel);
   bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
 
-  image(hdbimg, 285, 420);
+  text("Sponsored by", 285, 420);
+  image(hdbimg, 285, 440);
 
   nyttSpel();
 }
