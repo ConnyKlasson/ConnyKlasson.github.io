@@ -7,7 +7,6 @@ let bNyttSpel;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
-let hdbimg;
 //let nyttSlagPressed = false;
 
 function preload() {
