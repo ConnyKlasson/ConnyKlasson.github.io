@@ -68,8 +68,8 @@ function nyttSlag(e){
         sparaKnappar[i].elt.firstElementChild.disabled = false;
       }
       if (sparaKnappar[i].checked() == false){
-        tÃ¤rningar[i].rulla();
-        tÃ¤rningar[i].rita();
+        tärningar[i].rulla();
+        tärningar[i].rita();
       }
     }
     fyllPrel();
