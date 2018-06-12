@@ -10,7 +10,7 @@ let slag;
 let bonusRäkning = [];
 
 function preload() {
-  hdbimg = loadImage("HappyDuckBar.jpg");
+  hdbimg = loadImage("HappyDuckBar.png");
 }
 
 function setup() {
