@@ -104,7 +104,7 @@ function mouseReleased(){
       if (!resultatRad[j].klar){
         resultatRad[j].resultat = 0;
         if (j < 6){
-          resultatRad[j].bonusRÃ¤kning = ((j + 1) * 3) * -1;
+          resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
         }
       }else{
         klara ++;
@@ -126,18 +126,18 @@ function mouseReleased(){
 function summera(){
   let summa = 0;
   let bonusKlar = 0;
-  let bonusRÃ¤kningSumma = 0;
+  let bonusRäkningSumma = 0;
   for (let i = 0; i < 6; i++){
 
     if (resultatRad[i].klar){
       summa = summa + resultatRad[i].resultat;
       bonusKlar ++;
     }
-    bonusRÃ¤kningSumma = bonusRÃ¤kningSumma + resultatRad[i].bonusRÃ¤kning;
+    bonusRÃ¤kningSumma = bonusRäkningSumma + resultatRad[i].bonusRÃ¤kning;
 
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
-    resultatRad[6].bonusRÃ¤kning = bonusRÃ¤kningSumma;
+    resultatRad[6].bonusRäkning = bonusRäkningSumma;
     resultatRad[6].rita();
 
     if (bonusKlar == 6){
