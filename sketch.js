@@ -51,7 +51,7 @@ function setup() {
   bNyttSpel.mouseReleased(nyttSpel);
   bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
 
-  text("Sponsored by", 305, 420);
+  text("Sponsored by:", 305, 440);
   image(hdbimg, 285, 450);
 
   nyttSpel();
