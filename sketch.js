@@ -133,7 +133,7 @@ function summera(){
       summa = summa + resultatRad[i].resultat;
       bonusKlar ++;
     }
-    bonusRÃ¤kningSumma = bonusRäkningSumma + resultatRad[i].bonusRÃ¤kning;
+    bonusRÃ¤kningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
 
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
