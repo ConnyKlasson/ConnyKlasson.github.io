@@ -10,7 +10,7 @@ let slag;
 //let nyttSlagPressed = false;
 
 function preload() {
-  hdbimg = loadImage("HappyDuckBar.jpg");
+  let hdbimg = loadImage("HappyDuckBar.jpg");
 }
 
 function setup() {
