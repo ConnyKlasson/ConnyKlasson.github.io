@@ -52,7 +52,7 @@ function setup() {
   bNyttSpel.mouseReleased(nyttSpel);
   bNyttSpel.elt.style = "position: absolute; left: 320px; top: 350px; display: block;width:130px;height:40px;font-size: 20px";
 
-  image(hdbimg, 300, 300);
+  image(hdbimg, 250, 340);
 
   nyttSpel();
 }
