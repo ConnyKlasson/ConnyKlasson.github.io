@@ -14,6 +14,7 @@ function preload() {
 }
 
 function setup() {
+  frameRate(1);
   createCanvas (640, 680);
   background(0,100,0);
   noLoop();
@@ -22,7 +23,6 @@ function setup() {
   textSize(24);
   fill(255);
   text("YATZY La Liga training camp", 275, 45);
-
 
   let x, y;
 
@@ -33,7 +33,7 @@ function setup() {
     tärningar[i] = new tärning(x,y);
 
     sparaKnappar[i] = createCheckbox("");
-    sparaKnappar[i].position(x - 17, y + 40);
+    sparaKnappar[i].position(x - 17, y + 45);
     sparaKnappar[i].elt.firstElementChild.disabled = false;
     sparaKnappar[i].elt.firstElementChild.style="width:30px;height:30px;";
   }
@@ -46,15 +46,16 @@ function setup() {
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
-  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 225px; display: block;width:260px;height:50px;font-size: 22px";
+  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 205px; display: block;width:260px;height:50px;font-size: 22px";
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 350px; top: 350px; display: block;width:150px;height:50px;font-size: 22px";
+  bNyttSpel.elt.style = "position: absolute; left: 340px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
 
-  text("Sponsored by:", 350, 440);
-  image(hdbimg, 325, 450);
-  
+  textAlign(CENTER);
+  text("Powered by:", 430, 355);
+  image(hdbimg, 340, 385);
+
   nyttSpel();
 }
 
@@ -69,9 +70,11 @@ function nyttSlag(e){
       }
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
-        tärningar[i].rita();
+        delay(500);
+        tärningar[i].rita(i);
       }
     }
+
     fyllPrel();
 
     if (slag == 1){
@@ -165,7 +168,6 @@ function nyttSpel(){
 
   slag = 0;
   bNyttSlag.html("Slag 1");
-  bNyttSlag.show();
 
   for (let i = 0; i < antalTärningar; i++){
     tärningar[i].prickar = 0;
