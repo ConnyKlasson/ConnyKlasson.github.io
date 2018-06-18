@@ -70,7 +70,6 @@ function nyttSlag(e){
       }
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
-        delay(500);
         tärningar[i].rita(i);
       }
     }
