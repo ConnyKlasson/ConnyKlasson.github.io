@@ -34,7 +34,6 @@ function resultatRuta(x, y, rad){
       text(this.bonusRäkning, this.x-5, this.y + 27);
     }
 
-
     if (this.klar){
       fill(0);
       textSize(22);
@@ -58,7 +57,7 @@ function resultatRuta(x, y, rad){
     }else{
       resultatText = this.resultat;
     }
-    text(resultatText, this.x + 40, this.y + 27);
+    text(resultatText, this.x + 42, this.y + 27);
   }
 }
 

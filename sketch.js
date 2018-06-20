@@ -4,17 +4,21 @@ let tSize = 70;
 let pSize = 15;
 let bNyttSlag;
 let bNyttSpel;
+let bSkicka;
+let iNamn;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
 let bonusRäkning = [];
+let highScoreList = [];
+let fbData;
+let fbRef;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
 }
 
 function setup() {
-  frameRate(1);
   createCanvas (640, 680);
   background(0,100,0);
   noLoop();
@@ -46,17 +50,103 @@ function setup() {
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
-  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 205px; display: block;width:260px;height:50px;font-size: 22px";
+  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 225px; display: block;width:260px;height:50px;font-size: 22px";
+
+  iNamn = createInput("Namn");
+  iNamn.elt.style = "position: absolute; left: 230px; top: 225px; display: block;width:160px;height:44px;font-size: 22px";
+
+  bSkicka = createButton("Skicka");
+  bSkicka.mouseReleased(skickaFB);
+  bSkicka.elt.style = "position: absolute; left: 425px; top: 225px; display: block;width:160px;height:50px;font-size: 22px";
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 340px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
+  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
 
   textAlign(CENTER);
-  text("Powered by:", 430, 355);
-  image(hdbimg, 340, 385);
+  text("Powered by:", 500, 355);
+  text("Tio i topp:", 310, 355);
+  image(hdbimg, 400, 385);
+
+  let config = {
+    apiKey: "AIzaSyBbyL-ScLILVW_1Etzv63hjH9P_QmWvVQ0",
+    authDomain: "yatzy-high-score.firebaseapp.com",
+    databaseURL: "https://yatzy-high-score.firebaseio.com",
+    projectId: "yatzy-high-score",
+    storageBucket: "yatzy-high-score.appspot.com",
+    messagingSenderId: "634897849519"
+  };
+  firebase.initializeApp(config);
+
+  fbData = firebase.database();
+  fbRef = fbData.ref('Scores');
+
+  fbRef.on('value', gotData, errData);
 
   nyttSpel();
+}
+
+function skickaFB(){
+  let data = {Name:iNamn.value(), Point:resultatRad[17].resultat};
+  //console.log("SkickFB", data.Name, data.Point);
+  fbRef.push(data);
+  bNyttSlag.show();
+  iNamn.hide();
+  bSkicka.hide();
+}
+
+function gotData(data){
+  //console.log("gotData");
+  let scores = data.val();
+  let keys = Object.keys(scores);
+
+  for (let i = 0; i < keys.length; i++){
+    let k = keys[i];
+    //console.log(i, "gotData1", scores[k].Name, scores[k].Point);
+    highScoreList[i] = {Namn:scores[k].Name, Poäng:scores[k].Point};
+    //console.log(i, "gotData2", highScoreList[i]);
+  }
+
+  sortHS();
+
+  fill(255);
+  rect(230, 370, 150, 285);
+
+  for (let i = 0; i < highScoreList.length; i++){
+    //console.log("gotData2", highScoreList[i].Namn, highScoreList[i].Poäng);
+    fill(0);
+    textAlign(LEFT);
+    text(highScoreList[i].Namn, 235, 400 + (27 * i));
+    textAlign(RIGHT);
+    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+    if (i == 9){break;}
+  }
+}
+
+function errData(err){
+  console.log(err);
+}
+
+function sortHS(){
+  //console.log("sortHS");
+  let swapped;
+  let tempP;
+   for (let i = 0; i < highScoreList.length -1; i++){
+     swapped = false;
+     for (let j = 0; j < highScoreList.length -1; j++){
+       if (highScoreList[j].Poäng < highScoreList[j+1].Poäng){
+         tempP = highScoreList[j];
+         highScoreList[j] = highScoreList[j+1];
+         highScoreList[j+1] = tempP;
+         swapped = true;
+       }
+     }
+     if(!swapped){
+       break;
+     }
+   }
+  //console.log(highScoreList);
+  //reverse(highScoreList);
 }
 
 function nyttSlag(e){
@@ -121,8 +211,18 @@ function mouseReleased(){
     }else{
       bNyttSlag.html("Game Over");
       slag = 3;
+      kollaHS();
     }
   }
+}
+
+function kollaHS(){
+  if (resultatRad[17].resultat > highScoreList[highScoreList.length-1].Poäng){
+    iNamn.show();
+    bSkicka.show();
+    bNyttSlag.hide();
+  }
+
 }
 
 function summera(){
@@ -166,7 +266,10 @@ function nyttSpel(){
    "Liten stege", "Stor stege", "Kåk", "Chans", "Yatzy", "Summa:"];
 
   slag = 0;
+  bNyttSlag.show();
   bNyttSlag.html("Slag 1");
+  iNamn.hide();
+  bSkicka.hide();
 
   for (let i = 0; i < antalTärningar; i++){
     tärningar[i].prickar = 0;

@@ -7,8 +7,7 @@ function tärning(x, y){
     this.prickar = floor(random(1,7));
   }
 
-  this.rita = function(){
-    let time = 2000;
+  this.rita = function(i){
     let r = 25;
     let a = r - 5;
     fill(255);
