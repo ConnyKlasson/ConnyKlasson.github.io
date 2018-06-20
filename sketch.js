@@ -50,7 +50,7 @@ function setup() {
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
-  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 225px; display: block;width:280px;height:50px;font-size: 22px";
+  bNyttSlag.elt.style = "position: absolute; left: 295px; top: 225px; display: block;width:300px;height:50px;font-size: 22px";
 
   iNamn = createInput("Namn");
   iNamn.elt.style = "position: absolute; left: 230px; top: 225px; display: block;width:160px;height:44px;font-size: 22px";
