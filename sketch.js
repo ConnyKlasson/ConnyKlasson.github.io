@@ -217,8 +217,8 @@ function mouseReleased(){
 }
 
 function kollaHS(){
-  if (resultatRad[17].resultat > highScoreList[highScoreList.length-1].Poäng){
-    console.log(resultatRad[17].resultat, highScoreList[highScoreList.length-1].Poäng);
+  if (resultatRad[17].resultat > highScoreList[9].Poäng){
+    //console.log(resultatRad[17].resultat, highScoreList[9].Poäng);
     iNamn.show();
     bSkicka.show();
     bNyttSlag.hide();
