@@ -16,11 +16,12 @@ let fbRef;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
+  bordimg = loadImage("bord.png");
 }
 
 function setup() {
   createCanvas (640, 680);
-  background(0,100,0);
+  background(bordimg);
   noLoop();
 
   textAlign(TOP,LEFT);
