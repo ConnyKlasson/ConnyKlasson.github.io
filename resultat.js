@@ -9,8 +9,6 @@ function resultatRuta(x, y, rad){
   this.blurb;
 
   this.rita = function(){
-    console.log('rad : ', rad, this.blurb);
-    
     stroke(0);
     if (rad == 6 || rad == 7 || rad == 17){
       fill(200);
@@ -18,6 +16,8 @@ function resultatRuta(x, y, rad){
       fill(255);
     }
     rect(this.x, this.y, this.bredd, this.höjd);
+    
+    console.log('rad : ', rad);
 
     if (rad < 7){
       noStroke();
@@ -28,7 +28,8 @@ function resultatRuta(x, y, rad){
       rect(this.x-45, this.y+1, this.bredd-5, this.höjd-2);
       textSize(20);
       textAlign(RIGHT);
-
+      
+      console.log(this.blurb);
       text(this.blurb, this.x-5, this.y + 27);
     }
 
