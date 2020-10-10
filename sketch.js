@@ -184,8 +184,9 @@ function mouseReleased(){
 
   let rad = resultatTräff();
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
-    //console.log('mouseRel');
+   
     resultatRad[rad].klar = true;
+    console.log(rad, resultatRad[rad]);
     for (let i=0; i < antalTärningar; i++){
       tärningar[i].prickar = 0;
       tärningar[i].rita();
