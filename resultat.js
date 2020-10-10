@@ -29,7 +29,7 @@ function resultatRuta(x, y, rad){
       textSize(20);
       textAlign(RIGHT);
 
-      text("XX", this.x-5, this.y + 27);
+      text(this.blurb, this.x-5, this.y + 27);
     }
 
     if (this.klar){
