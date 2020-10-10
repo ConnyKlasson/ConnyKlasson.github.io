@@ -182,16 +182,16 @@ function nyttSlag(e){
 }
 
 function mouseReleased(){
-  console.log('mouseRel');
 
   let rad = resultatTräff();
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
-      resultatRad[rad].klar = true;
-      for (let i=0; i < antalTärningar; i++){
-        tärningar[i].prickar = 0;
-        tärningar[i].rita();
-        sparaKnappar[i].checked(false);
-        sparaKnappar[i].elt.firstElementChild.disabled = true;
+    console.log('mouseRel');
+    resultatRad[rad].klar = true;
+    for (let i=0; i < antalTärningar; i++){
+      tärningar[i].prickar = 0;
+      tärningar[i].rita();
+      sparaKnappar[i].checked(false);
+      sparaKnappar[i].elt.firstElementChild.disabled = true;
     }
     let klara = 0;
     for (let j = 0; j < 18; j++){
