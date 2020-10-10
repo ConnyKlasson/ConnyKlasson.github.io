@@ -247,7 +247,7 @@ function summera(){
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
     //resultatRad[6].bonusRäkning = bonusRäkningSumma;
-    resultatRad[6].rita(false);
+    resultatRad[6].rita();
 
     if (bonusKlar == 6){
       if (summa > 62){
@@ -255,11 +255,11 @@ function summera(){
       }
     }
     resultatRad[7].klar = true;
-    resultatRad[7].rita(false);
+    resultatRad[7].rita();
   }
   
   resultatRad[blurbIndex].bonusRäkning = blurbSumma;
-  resultatRad[blurbIndex].rita(false);
+  resultatRad[blurbIndex].rita();
 
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
@@ -311,7 +311,7 @@ function nyttSpel(){
 
     resultatRad[j].resultat = 0;
     resultatRad[j].klar = false;
-    resultatRad[j].rita(false);
+    resultatRad[j].rita();
    }
   //console.log(resultatRad);
 }
