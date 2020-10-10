@@ -198,8 +198,9 @@ function mouseReleased(){
         resultatRad[j].resultat = 0;
         klara ++;
       }
-      resultatRad[j].rita(false);
+      resultatRad[j].rita();
     }
+    console.log(klara);
     summera();
 
     if (klara < 18){
@@ -211,7 +212,6 @@ function mouseReleased(){
       kollaHS();
     }
   }
-  console.log(klara);
 }
 
 function kollaHS(){
