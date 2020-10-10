@@ -21,7 +21,7 @@ function resultatRuta(x, y, rad){
     rect(this.x, this.y, this.bredd, this.höjd);
 
     if (rad < 7){
-      console.log(rad , this.bonusRäkning);
+      console.log('R'.rad , 'BR', this.bonusRäkning, 'BI', blurbIndex, 'BS', blurbSumma);
       noStroke();
       fill(255);
       if (rad == 6){
