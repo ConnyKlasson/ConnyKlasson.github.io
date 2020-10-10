@@ -303,7 +303,8 @@ function nyttSpel(){
     text(texter[j], 30 , y + 25);
 
     if (j < 6){
-      resultatRad[j].blurb = ((j + 1) * 3) * -1;
+      //resultatRad[j].blurb = ((j + 1) * 3) * -1;
+      resultatRad[j].blurb = 0;
     }
 
     resultatRad[j].resultat = 0;
