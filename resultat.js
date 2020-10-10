@@ -17,7 +17,7 @@ function resultatRuta(x, y, rad){
     }
     rect(this.x, this.y, this.bredd, this.höjd);
     
-    console.log('rad : ', rad);
+    //console.log('rad : ', rad);
 
     if (rad < 7){
       noStroke();
@@ -30,7 +30,7 @@ function resultatRuta(x, y, rad){
       textAlign(RIGHT);
       
       console.log(this.blurb);
-      text(this.blurb, this.x-5, this.y + 27);
+      text('blurb', this.x-5, this.y + 27);
       
       fill(200, 0, 0);
        rect(this.x-5, this.y + 27, this.bredd-5, this.höjd-2);
