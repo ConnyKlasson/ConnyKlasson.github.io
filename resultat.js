@@ -79,7 +79,7 @@ fyllPrel = function(){
         resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
       }
 
-      resultatRad[k].rita();
+      resultatRad[k].rita(true);
     }
   }
 
