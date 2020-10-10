@@ -236,9 +236,11 @@ function summera(){
   for (let i = 0; i < 6; i++){
 
     if (resultatRad[i].klar){
-      console.log('resultatRad[i].resultat');
+      
       summa = summa + resultatRad[i].resultat;
-      blurb[i] = resultatRad[i].resultat - ((i + 1) * 3);
+      blurbsumma = blurbsumma + resultatRad[i].resultat - ((i + 1) * 3);
+      blurbIndex = i;
+      console.log(blurbsumma);
       bonusKlar ++;
     }
     bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
