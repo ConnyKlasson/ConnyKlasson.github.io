@@ -12,8 +12,6 @@ let slag;
 let highScoreList = [];
 let fbData;
 let fbRef;
-let blurbSumma = 0;
-let blurbIndex = -1;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
