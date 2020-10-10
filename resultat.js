@@ -7,6 +7,7 @@ function resultatRuta(x, y, rad){
   let resultatText;
   this.klar = false;
   this.blurb;
+  let blurbText;
 
   this.rita = function(){
     stroke(0);
@@ -34,7 +35,13 @@ function resultatRuta(x, y, rad){
         fill(255, 0, 0);
       }
       
-      text(this.blurb, this.x-5, this.y + 27);
+      if (this.blurb == 0){
+        blurbText = "";
+      }else{
+        blurbText = this.blurb;
+      }
+      
+      text(blurbText, this.x-5, this.y + 27);
       
     }
 
