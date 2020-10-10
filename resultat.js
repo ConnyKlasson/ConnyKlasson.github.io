@@ -73,7 +73,7 @@ fyllPrel = function(){
     if (!resultatRad[k].klar){
       resultatRad[k].resultat = 0;
       if (k < 6){
-        //resultatRad[k].blurb = 0;
+        resultatRad[k].blurb = 0;
       }
     }
   }
