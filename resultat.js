@@ -21,7 +21,7 @@ function resultatRuta(x, y, rad){
 
     if (rad < 7){
       noStroke();
-      fill(235);
+      fill(255);
       if (rad == 6){
         fill(200);
       }
@@ -29,7 +29,7 @@ function resultatRuta(x, y, rad){
       textSize(20);
       textAlign(RIGHT);
       
-      console.log(this.blurb);
+      fill(255, 0, 0);
       text('blurb', this.x-5, this.y + 27);
       
     }
