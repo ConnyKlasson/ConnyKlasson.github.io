@@ -182,6 +182,7 @@ function nyttSlag(e){
 }
 
 function mouseReleased(){
+  console.log('mouseRel');
 
   let rad = resultatTräff();
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
