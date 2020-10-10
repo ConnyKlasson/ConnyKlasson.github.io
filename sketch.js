@@ -9,7 +9,7 @@ let iNamn;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
-let bonusRäkning = [];
+//let bonusRäkning = [];
 let highScoreList = [];
 let fbData;
 let fbRef;
