@@ -210,6 +210,7 @@ function mouseReleased(){
       slag = 3;
       kollaHS();
     }
+    console.log(klara);
   }
 }
 
@@ -298,7 +299,6 @@ function nyttSpel(){
     text(texter[j], 30 , y + 25);
 
     if (j < 6){
-      //resultatRad[j].blurb = ((j + 1) * 3) * -1;
       resultatRad[j].blurb = 0;
     }
 
@@ -306,5 +306,4 @@ function nyttSpel(){
     resultatRad[j].klar = false;
     resultatRad[j].rita();
    }
-  //console.log(resultatRad);
 }
