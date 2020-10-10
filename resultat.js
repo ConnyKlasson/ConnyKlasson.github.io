@@ -183,7 +183,7 @@ fyllPrel = function(){
       if (prelResultat[j] > 0 && !resultatRad[j].klar){
         resultatRad[j].resultat = prelResultat[j];
         resultatRad[j].bonusRäkning = resultatRad[j].bonusRäkning + prelResultat[j];
-        resultatRad[j].rita();
+        resultatRad[j].rita(true);
       }
   }
 }
