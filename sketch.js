@@ -233,7 +233,7 @@ function summera(){
   //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
-    console.log((i, resultatRad[i].klar);
+    console.log(i, resultatRad[i].klar);
 
     if (resultatRad[i].klar){
       
