@@ -76,12 +76,11 @@ fyllPrel = function(){
     if (!resultatRad[k].klar){
       resultatRad[k].resultat = 0;
 
-      //if (k < 6){
-      //  resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
-      //}
+      if (k < 6){
+        resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
+      }
       if (k == blurbIndex){
-      //  resultatRad[k].bonusRäkning = blurbsumma;
-        
+        resultatRad[k].bonusRäkning = blurbsumma;
       }
 
       resultatRad[k].rita(true);
