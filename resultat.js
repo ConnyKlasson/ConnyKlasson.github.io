@@ -29,8 +29,12 @@ function resultatRuta(x, y, rad){
       textSize(20);
       textAlign(RIGHT);
       
-      fill(255, 0, 0);
-      text('blurb', this.x-5, this.y + 27);
+      fill(0);
+      if (this.blurb < 0){
+        fill(255, 0, 0);
+      }
+      
+      text(this.blurb, this.x-5, this.y + 27);
       
     }
 
