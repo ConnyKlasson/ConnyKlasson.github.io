@@ -210,8 +210,8 @@ function mouseReleased(){
       slag = 3;
       kollaHS();
     }
-    console.log(klara);
   }
+  console.log(klara);
 }
 
 function kollaHS(){
