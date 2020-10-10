@@ -199,8 +199,8 @@ function mouseReleased(){
         klara ++;
       }
       resultatRad[j].rita();
-      console.log(klara);
     }
+    console.log(klara);
    
     summera();
 
