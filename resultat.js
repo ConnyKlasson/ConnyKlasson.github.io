@@ -63,7 +63,7 @@ function resultatRuta(x, y, rad){
         resultatText = 0;
       }
       if (rad == 7){
-        resultatText = "---";
+        resultatText = "";
       }
     }else{
       resultatText = this.resultat;
