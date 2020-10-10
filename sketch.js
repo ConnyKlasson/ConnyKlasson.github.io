@@ -201,10 +201,6 @@ function mouseReleased(){
       resultatRad[j].rita(false);
     }
     summera();
-    
-    if (j < 6){
-          //blurb[rad] =
-    }
 
     if (klara < 18){
       slag = 0;
@@ -231,7 +227,6 @@ function summera(){
   let bonusKlar = 0;
   blurbSumma = 0;
   blurbIndex = -1;
-  //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
     if (resultatRad[i].klar){
