@@ -233,20 +233,18 @@ function summera(){
   //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
-
     if (resultatRad[i].klar){
-      
       summa = summa + resultatRad[i].resultat;
       blurbSumma = blurbSumma + resultatRad[i].blurb;
       blurbIndex = i;
       bonusKlar ++;
     }else{
       resultatRad[i].blurb = 0;
+      resultatRad[i].rita();
     }
    
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
-    //resultatRad[6].bonusRäkning = bonusRäkningSumma;
     resultatRad[6].rita();
 
     if (bonusKlar == 6){
