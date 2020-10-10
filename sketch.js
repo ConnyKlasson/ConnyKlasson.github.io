@@ -186,7 +186,6 @@ function mouseReleased(){
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
    
     resultatRad[rad].klar = true;
-    console.log(rad, resultatRad[rad]);
     for (let i=0; i < antalTärningar; i++){
       tärningar[i].prickar = 0;
       tärningar[i].rita();
@@ -239,6 +238,7 @@ function summera(){
       blurbIndex = i;
       bonusKlar ++;
     }else{
+      console.log('ej klar');
       resultatRad[i].blurb = 0;
       resultatRad[i].rita();
     }
@@ -255,9 +255,6 @@ function summera(){
     resultatRad[7].klar = true;
     resultatRad[7].rita();
   }
-  
-  resultatRad[blurbIndex].bonusRäkning = blurbSumma;
-  resultatRad[blurbIndex].rita();
 
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
@@ -265,7 +262,7 @@ function summera(){
   }
   resultatRad[17].klar = true;
   resultatRad[17].resultat = summa;
-  resultatRad[17].rita(false);
+  resultatRad[17].rita();
 }
 
 function nyttSpel(){
