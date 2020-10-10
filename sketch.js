@@ -254,7 +254,7 @@ function summera(){
   }
   if (blurbIndex > -1){
     resultatRad[blurbIndex].blurb = blurbSumma;
-    if ( blurbIndex < 5){
+    if ( bonusKlar < 6){
       resultatRad[blurbIndex].rita();
     }
   }
