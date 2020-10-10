@@ -9,7 +9,7 @@ function resultatRuta(x, y, rad){
   this.bonusRäkning = 0;
   let bonusText;
 
-  this.rita = function(){
+  this.rita = function(prel){
     stroke(0);
     if (rad == 6 || rad == 7 || rad == 17){
       fill(200);
@@ -32,7 +32,7 @@ function resultatRuta(x, y, rad){
       }else{
         fill(255, 0, 0);
       }
-      if (this.bonusRäkning == 0 || !this.klar){
+      if (this.bonusRäkning == 0 || (!prel && !this.klar)){
         bonusText = "";
       }else{
         bonusText = this.bonusRäkning;
