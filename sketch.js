@@ -230,6 +230,7 @@ function summera(){
   let summa = 0;
   let bonusKlar = 0;
   blurbSumma = 0;
+  blurbIndex = -1;
   //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
@@ -237,12 +238,7 @@ function summera(){
       summa = summa + resultatRad[i].resultat;
       blurbSumma = blurbSumma + resultatRad[i].blurb;
       blurbIndex = i;
-      
       bonusKlar ++;
-    }else{
-      //console.log('ej klar');
-      //resultatRad[i].blurb = 0;
-      //resultatRad[i].rita();
     }
     resultatRad[i].blurb = 0;
     resultatRad[i].rita();
