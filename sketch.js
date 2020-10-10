@@ -315,5 +315,5 @@ function nyttSpel(){
     resultatRad[j].klar = false;
     resultatRad[j].rita(false);
    }
-  console.log(resultatRad);
+  //console.log(resultatRad);
 }
