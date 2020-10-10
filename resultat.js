@@ -10,7 +10,7 @@ function resultatRuta(x, y, rad){
   let bonusText;
 
   this.rita = function(prel){
-    console.log('rad : ', rad);
+    //console.log('rad : ', rad);
     
     stroke(0);
     if (rad == 6 || rad == 7 || rad == 17){
@@ -21,7 +21,7 @@ function resultatRuta(x, y, rad){
     rect(this.x, this.y, this.bredd, this.höjd);
 
     if (rad < 7){
-      //console.log(this.bonusRäkning);
+      console.log(rad, this.bonusRäkning);
       noStroke();
       fill(255);
       if (rad == 6){
