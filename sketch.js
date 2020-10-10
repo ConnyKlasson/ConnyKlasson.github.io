@@ -260,7 +260,7 @@ function summera(){
   }
   
   resultatRad[blurbIndex].bonusRäkning = blurbSumma;
-  resultatRad[blurbIndex].rita();
+  resultatRad[blurbIndex].rita(false);
 
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
