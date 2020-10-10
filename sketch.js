@@ -241,6 +241,7 @@ function summera(){
       //console.log(blurbSumma, blurbIndex);
       bonusKlar ++;
     }else{
+      console.log(resultatRad[i].burb);
       resultatRad[i].burb = 0;
     }
    
