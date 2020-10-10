@@ -32,8 +32,6 @@ function resultatRuta(x, y, rad){
       console.log(this.blurb);
       text('blurb', this.x-5, this.y + 27);
       
-      fill(200, 0, 0);
-       rect(this.x-5, this.y + 27, this.bredd-5, this.höjd-2);
     }
 
     if (this.klar){
