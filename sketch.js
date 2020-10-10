@@ -239,6 +239,7 @@ function summera(){
       bonusKlar ++;
     }
     bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
+    console.log(resultatRad[i].bonusRäkning);
 
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
