@@ -12,6 +12,7 @@ let slag;
 let highScoreList = [];
 let fbData;
 let fbRef;
+let blurb = [];
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -196,15 +197,15 @@ function mouseReleased(){
     for (let j = 0; j < 18; j++){
       if (!resultatRad[j].klar){
         resultatRad[j].resultat = 0;
-        //if (j < 6){
-        //  resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
-        //}
-      }else{
         klara ++;
       }
       resultatRad[j].rita(false);
     }
     summera();
+    
+    if (j < 6){
+          //blurb[rad] =
+    }
 
     if (klara < 18){
       slag = 0;
@@ -231,15 +232,16 @@ function summera(){
   let bonusKlar = 0;
   let bonusRäkningSumma = 0;
   
+  
   for (let i = 0; i < 6; i++){
 
     if (resultatRad[i].klar){
       summa = summa + resultatRad[i].resultat;
+      blurb[i] = resultatRad[i].resultat - ((i + 1) * 3);
       bonusKlar ++;
     }
     bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
-    //console.log(resultatRad[i].bonusRäkning);
-
+   
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
     resultatRad[6].bonusRäkning = bonusRäkningSumma;
