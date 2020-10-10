@@ -236,12 +236,15 @@ function summera(){
       summa = summa + resultatRad[i].resultat;
       blurbSumma = blurbSumma + resultatRad[i].blurb;
       blurbIndex = i;
+      
       bonusKlar ++;
     }else{
-      console.log('ej klar');
-      resultatRad[i].blurb = 0;
-      resultatRad[i].rita();
+      //console.log('ej klar');
+      //resultatRad[i].blurb = 0;
+      //resultatRad[i].rita();
     }
+    resultatRad[i].blurb = 0;
+    resultatRad[i].rita();
    
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
@@ -255,7 +258,9 @@ function summera(){
     resultatRad[7].klar = true;
     resultatRad[7].rita();
   }
-
+  resultatRad[blurbIndex].blurb = blurbSumma;
+  resultatRad[blurbIndex].rita();
+  
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
     summa = summa + resultatRad[j].resultat;
