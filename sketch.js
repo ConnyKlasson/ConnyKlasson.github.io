@@ -197,7 +197,7 @@ function mouseReleased(){
       if (!resultatRad[j].klar){
         resultatRad[j].resultat = 0;
         if (j < 6){
-          resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
+          //resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
         }
       }else{
         klara ++;
