@@ -27,17 +27,8 @@ function resultatRuta(x, y, rad){
       rect(this.x-45, this.y+1, this.bredd-5, this.höjd-2);
       textSize(20);
       textAlign(RIGHT);
-      if (this.bonusRäkning > -1){
-        fill(0);
-      }else{
-        fill(255, 0, 0);
-      }
-      if (this.bonusRäkning == 0){
-        bonusText = "";
-      }else{
-        bonusText = this.bonusRäkning;
-      }
-      text(bonusText, this.x-5, this.y + 27);
+
+      text("XX", this.x-5, this.y + 27);
     }
 
     if (this.klar){
