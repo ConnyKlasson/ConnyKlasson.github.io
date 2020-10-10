@@ -304,6 +304,6 @@ function nyttSpel(){
 
     resultatRad[j].resultat = 0;
     resultatRad[j].klar = false;
-    resultatRad[j].rita();
+    resultatRad[j].rita(false);
    }
 }
