@@ -12,6 +12,8 @@ let slag;
 let highScoreList = [];
 let fbData;
 let fbRef;
+let blurbsumma = 0;
+let blurbIndex = 0;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -230,8 +232,6 @@ function summera(){
   let summa = 0;
   let bonusKlar = 0;
   let bonusRäkningSumma = 0;
-  let blurbsumma = 0;
-  let blurbIndex = -1;
   
   for (let i = 0; i < 6; i++){
 
