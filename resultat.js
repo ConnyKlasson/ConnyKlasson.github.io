@@ -32,7 +32,7 @@ function resultatRuta(x, y, rad){
       }else{
         fill(255, 0, 0);
       }
-      if (this.bonusRäkning == 0 || (!prel && !this.klar)){
+      if (this.bonusRäkning == 0 || (prel && !this.klar)){
         bonusText = "";
       }else{
         bonusText = this.bonusRäkning;
