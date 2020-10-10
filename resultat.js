@@ -20,7 +20,7 @@ function resultatRuta(x, y, rad){
 
     if (rad < 7){
       noStroke();
-      fill(225);
+      fill(100);
       if (rad == 6){
         fill(200);
       }
