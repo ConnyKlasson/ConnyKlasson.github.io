@@ -6,6 +6,7 @@ function resultatRuta(x, y, rad){
   this.resultat = 0;
   let resultatText;
   this.klar = false;
+  this.blurb;
 
   this.rita = function(){
     //console.log('rad : ', rad);
