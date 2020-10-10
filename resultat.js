@@ -31,7 +31,7 @@ function resultatRuta(x, y, rad){
       }else{
         fill(255, 0, 0);
       }
-      //text(this.bonusRäkning, this.x-5, this.y + 27);
+      text(this.bonusRäkning, this.x-5, this.y + 27);
     }
 
     if (this.klar){
