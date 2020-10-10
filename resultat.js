@@ -79,7 +79,7 @@ fyllPrel = function(){
       if (k < 6){
         resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
       }
-      if (k == blurbIndex){
+      if (blurbindex > -1 && k == blurbIndex){
         resultatRad[k].bonusRäkning = blurbsumma;
       }
 
