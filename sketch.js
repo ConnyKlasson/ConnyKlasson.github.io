@@ -253,8 +253,10 @@ function summera(){
     resultatRad[7].klar = true;
     resultatRad[7].rita();
   }
-  resultatRad[blurbIndex].blurb = blurbSumma;
-  resultatRad[blurbIndex].rita();
+  if (blurbIndex > -1){
+    resultatRad[blurbIndex].blurb = blurbSumma;
+    resultatRad[blurbIndex].rita();
+  }
   
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
