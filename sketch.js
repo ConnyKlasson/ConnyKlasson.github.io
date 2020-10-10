@@ -231,7 +231,7 @@ function kollaHS(){
 function summera(){
   let summa = 0;
   let bonusKlar = 0;
-  let bonusRäkningSumma = 0;
+  //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
 
@@ -243,11 +243,11 @@ function summera(){
       console.log(blurbSumma, blurbIndex);
       bonusKlar ++;
     }
-    bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
+    //bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
    
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
-    resultatRad[6].bonusRäkning = bonusRäkningSumma;
+    //resultatRad[6].bonusRäkning = bonusRäkningSumma;
     resultatRad[6].rita(false);
 
     if (bonusKlar == 6){
