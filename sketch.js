@@ -240,7 +240,7 @@ function summera(){
       summa = summa + resultatRad[i].resultat;
       blurbSumma = blurbSumma + resultatRad[i].resultat - ((i + 1) * 3);
       blurbIndex = i;
-      console.log(blurbSumma, blurbIndex);
+      //console.log(blurbSumma, blurbIndex);
       bonusKlar ++;
     }
     //bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
