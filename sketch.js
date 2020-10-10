@@ -238,7 +238,7 @@ function summera(){
     if (resultatRad[i].klar){
       
       summa = summa + resultatRad[i].resultat;
-      blurbSumma = blurbSumma + resultatRad[i].resultat - ((i + 1) * 3);
+      blurbSumma = blurbSumma + resultatRad[i].bonusRäkning;
       blurbIndex = i;
       //console.log(blurbSumma, blurbIndex);
       bonusKlar ++;
