@@ -250,6 +250,8 @@ function summera(){
     if (bonusKlar == 6){
       if (summa > 62){
         resultatRad[7].resultat = 50;
+      }else{
+        resultatRad[7].resultat = "---";
       }
     }
     resultatRad[7].klar = true;
