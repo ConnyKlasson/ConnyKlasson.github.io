@@ -236,12 +236,13 @@ function summera(){
     if (resultatRad[i].klar){
       
       summa = summa + resultatRad[i].resultat;
-      blurbSumma = blurbSumma + resultatRad[i].bonusRäkning;
+      blurbSumma = blurbSumma + resultatRad[i].blurb;
       blurbIndex = i;
       //console.log(blurbSumma, blurbIndex);
       bonusKlar ++;
+    }else{
+      resultatRad[i].burb = 0;
     }
-    //bonusRäkningSumma = bonusRäkningSumma + resultatRad[i].bonusRäkning;
    
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
