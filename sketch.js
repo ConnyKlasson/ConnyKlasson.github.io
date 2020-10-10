@@ -229,6 +229,7 @@ function kollaHS(){
 function summera(){
   let summa = 0;
   let bonusKlar = 0;
+  blurbSumma = 0;
   //let bonusRäkningSumma = 0;
   
   for (let i = 0; i < 6; i++){
