@@ -202,7 +202,7 @@ function mouseReleased(){
       }else{
         klara ++;
       }
-      resultatRad[j].rita();
+      resultatRad[j].rita(false);
     }
     summera();
 
