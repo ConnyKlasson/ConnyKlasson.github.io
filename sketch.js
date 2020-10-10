@@ -9,7 +9,6 @@ let iNamn;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
-//let bonusRäkning = [];
 let highScoreList = [];
 let fbData;
 let fbRef;
@@ -225,13 +224,13 @@ function kollaHS(){
     bSkicka.show();
     bNyttSlag.hide();
   }
-
 }
 
 function summera(){
   let summa = 0;
   let bonusKlar = 0;
   let bonusRäkningSumma = 0;
+  
   for (let i = 0; i < 6; i++){
 
     if (resultatRad[i].klar){
