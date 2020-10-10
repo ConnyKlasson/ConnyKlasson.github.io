@@ -242,7 +242,7 @@ function summera(){
     resultatRad[6].klar = true;
     resultatRad[6].resultat = summa;
     resultatRad[6].bonusRäkning = bonusRäkningSumma;
-    resultatRad[6].rita();
+    resultatRad[6].rita(false);
 
     if (bonusKlar == 6){
       if (summa > 62){
@@ -250,7 +250,7 @@ function summera(){
       }
     }
     resultatRad[7].klar = true;
-    resultatRad[7].rita();
+    resultatRad[7].rita(false);
   }
 
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
@@ -259,7 +259,7 @@ function summera(){
   }
   resultatRad[17].klar = true;
   resultatRad[17].resultat = summa;
-  resultatRad[17].rita();
+  resultatRad[17].rita(false);
 }
 
 function nyttSpel(){
