@@ -201,7 +201,6 @@ function mouseReleased(){
       }
       resultatRad[j].rita();
     }
-    console.log(klara);
    
     summera();
 
