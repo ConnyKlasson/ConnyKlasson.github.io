@@ -196,6 +196,7 @@ function mouseReleased(){
     for (let j = 0; j < 18; j++){
       if (!resultatRad[j].klar){
         resultatRad[j].resultat = 0;
+      }else{
         klara ++;
       }
       resultatRad[j].rita();
