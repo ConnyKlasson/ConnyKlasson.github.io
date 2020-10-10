@@ -273,6 +273,8 @@ function nyttSpel(){
    "Summa:", "Bonus", "Ett par", "Två par", "Tretal", "Fyrtal",
    "Liten stege", "Stor stege", "Kåk", "Chans", "Yatzy", "Summa:"];
 
+  blurbSumma = 0;
+  blurbIndex = -1;
   slag = 0;
   bNyttSlag.show();
   bNyttSlag.html("Slag 1");
