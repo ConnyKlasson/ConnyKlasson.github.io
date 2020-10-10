@@ -71,7 +71,7 @@ fyllPrel = function(){
   for (let k = 0; k < 18; k++){
     prelResultat[k] = 0;
     if (!resultatRad[k].klar){
-      c[k].resultat = 0;
+      resultatRad[k].resultat = 0;
       //resultatRad[k].rita(true);
       if (k < 6){
         resultatRad[k].blurb = 0;
