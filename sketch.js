@@ -306,11 +306,11 @@ function nyttSpel(){
     textSize(20);
     text(texter[j], 30 , y + 25);
 
-    //if (j < 6){
-    //  resultatRad[j].bonusRäkning = ((j + 1) * 3) * -1;
-    //}
+    if (j < 6){
+      resultatRad[j].blurb = ((j + 1) * 3) * -1;
+    }
     if (j == 6){
-      resultatRad[j].bonusRäkning = -63;
+      resultatRad[j].blurb = -63;
     }
 
     resultatRad[j].resultat = 0;
