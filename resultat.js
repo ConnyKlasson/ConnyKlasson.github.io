@@ -9,7 +9,7 @@ function resultatRuta(x, y, rad){
   this.blurb;
 
   this.rita = function(){
-    console.log('rad : ', rad);
+    console.log('rad : ', rad, this.blurb);
     
     stroke(0);
     if (rad == 6 || rad == 7 || rad == 17){
