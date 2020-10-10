@@ -80,7 +80,7 @@ fyllPrel = function(){
         resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
       }
       if (blurbindex > -1 && k == blurbIndex){
-        resultatRad[k].bonusRäkning = blurbsumma;
+        resultatRad[k].bonusRäkning = blurbSumma;
       }
 
       resultatRad[k].rita(true);
