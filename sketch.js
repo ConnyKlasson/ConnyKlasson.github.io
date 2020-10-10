@@ -258,6 +258,9 @@ function summera(){
     resultatRad[7].klar = true;
     resultatRad[7].rita(false);
   }
+  
+  resultatRad[blurbIndex].bonusRäkning = blurbSumma;
+  resultatRad[blurbIndex].rita();
 
   summa = resultatRad[6].resultat + resultatRad[7].resultat;
   for (let j = 8; j < 17; j++){
