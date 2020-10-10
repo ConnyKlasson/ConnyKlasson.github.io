@@ -7,7 +7,7 @@ function resultatRuta(x, y, rad){
   let resultatText;
   this.klar = false;
 
-  this.rita = function(prel){
+  this.rita = function(){
     //console.log('rad : ', rad);
     
     stroke(0);
@@ -19,7 +19,6 @@ function resultatRuta(x, y, rad){
     rect(this.x, this.y, this.bredd, this.höjd);
 
     if (rad < 7){
-      console.log('R:', rad , 'BR', this.bonusRäkning, 'BI', blurbIndex, 'BS', blurbSumma);
       noStroke();
       fill(255);
       if (rad == 6){
@@ -75,14 +74,6 @@ fyllPrel = function(){
     prelResultat[k] = 0;
     if (!resultatRad[k].klar){
       resultatRad[k].resultat = 0;
-
-      if (k < 6){
-        resultatRad[k].bonusRäkning = ((k + 1) * 3) * -1;
-      }
-      if (blurbIndex > -1 && k == blurbIndex){
-        resultatRad[k].bonusRäkning = blurbSumma;
-      }
-
       resultatRad[k].rita(true);
     }
   }
