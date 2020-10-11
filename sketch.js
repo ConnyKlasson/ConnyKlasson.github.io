@@ -80,9 +80,8 @@ function setup() {
   bNyttSpel.elt.style = "position: absolute; left: 400px; top: 675px; display: block;width:200px;height:50px;font-size: 22px";
 
   textAlign(CENTER);
-  text("Powered by:", 500, 370);
   text("Markera lika", 525, 325);
-  image(hdbimg, 400, 390);
+  image(hdbimg, 400, 380);
   image(dicesimg, 25, 665);
 
   let config = {
