@@ -228,9 +228,15 @@ function nyttSlag(e){
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
+        
+        for (let j = 0; j < statistik.length; j++){
+          if (tärningar[i]. == J){
+            statistik[i] = statistik[i] + prelResultat[i] / (i + 1);
+          }
+        }
       }
     }
-
+    ritaStatistik();
     fyllPrel();
 
     if (slag == 1){
