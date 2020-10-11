@@ -17,8 +17,6 @@ function resultatRuta(x, y, rad){
       fill(255);
     }
     rect(this.x, this.y, this.bredd, this.höjd);
-    
-    //console.log('rad : ', rad);
 
     if (rad < 6){
       noStroke();
