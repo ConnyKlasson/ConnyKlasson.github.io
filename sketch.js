@@ -110,8 +110,10 @@ function setup() {
 function ritaStatistik(){
   console.log('ritaStatistik');
   fill(255);
+  
   rect(25, 709, 355, 28);
   fill(0);
+  textSize(20);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
     text(statistik[i], 60 + (57 * i), 728);
