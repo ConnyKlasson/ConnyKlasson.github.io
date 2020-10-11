@@ -111,7 +111,7 @@ function ritaTioiTopp(){
   rect(235, 330, 140, 30);
   fill(0);
   textAlign(CENTER);
-  text("Tio i topp:", 300, 360);
+  text("Tio i topp:", 300, 355);
   
   for (let i = 0; i < highScoreList.length; i++){
     fill(0);
@@ -130,7 +130,7 @@ function ritaHallofFame(){
   rect(235, 330, 140, 30);
   fill(0);
   textAlign(CENTER);
-  text("Hall of fame:", 300, 300);
+  text("Hall of fame:", 300, 355);
   
   for (let i = 0; i < hallofFamelist.length; i++){
     fill(0);
