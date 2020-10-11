@@ -113,8 +113,8 @@ function ritaStatistik(){
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < antalTärningar; i++){
-    console.log(statistik);
-    //text(statistik[i], 710, 45 + (27 * i));
+    //console.log(statistik);
+    text(statistik[i], 710, 45 + (27 * i));
   }
 }
 
