@@ -258,7 +258,7 @@ function nyttSlag(e){
       let markerad = -1;
       for (let i = 0; i < antalTärningar; i++){
         if (sparaKnappar[i].checked() == true){
-          markerad = tärningar[i].prickar);
+          markerad = tärningar[i].prickar;
         }
       }
       for (let i = 0; i < antalTärningar; i++){
