@@ -16,6 +16,7 @@ let hallofFameList = [];
 let fbData;
 let fbRef;
 let statistik = [0, 0, 0, 0, 0, 0];
+let sparaLika;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -52,6 +53,10 @@ function setup() {
     y = 25 + (35 * j);
     resultatRad[j] = new resultatRuta(x, y, j);
   }
+  
+  sparaLika = createCheckbox("Markera lika");
+  sparaLika.position(420, 300);
+  sparaLika.elt.firstElementChild.style="width:30px;height:30px;";
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
