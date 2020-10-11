@@ -108,7 +108,7 @@ function ritaTioiTopp(){
   bHallofFame.html("Hall of fame");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 320, 135, 30);
+  rect(235, 330, 135, 30);
   fill(0);
   textAlign(CENTER);
   text("Tio i topp:", 310, 355);
@@ -127,7 +127,7 @@ function ritaHallofFame(){
   bHallofFame.html("Tio i top");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 320, 135, 30);
+  rect(235, 330, 135, 30);
   fill(0);
   textAlign(CENTER);
   text("Tio i topp:", 310, 355);
