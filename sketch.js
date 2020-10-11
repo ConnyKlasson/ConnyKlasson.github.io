@@ -12,6 +12,7 @@ let sparaKnappar = [];
 let resultatRad = [];
 let slag;
 let highScoreList = [];
+let hallofFameList = [];
 let fbData;
 let fbRef;
 
@@ -88,9 +89,45 @@ function setup() {
   fbRef = fbData.ref('Scores');
 
   fbRef.on('value', gotData, errData);
+  
+  hallofFamelist = [
+    {Namn: "CarinaM", Poäng: 332},
+    {Namn: "Emina", Poäng: 330},
+    {Namn: "Conny", Poäng: 319},
+    {Namn: "Kia :-)", Poäng: 313},
+    {Namn: "LB", Poäng: 310},
+    {Namn: "AB", Poäng: 300},
+    {Namn: "Gunnar", Poäng: 267},
+    {Namn: "Ulrika", Poäng: 261}
+  ];
 
   nyttSpel();
-  console.log(highScoreList);
+}
+
+function ritaTioiTopp(){
+    console.log("ritaTioiTopp");
+  
+    for (let i = 0; i < highScoreList.length; i++){
+      fill(0);
+      textAlign(LEFT);
+      text(highScoreList[i].Namn, 235, 400 + (27 * i));
+      textAlign(RIGHT);
+      text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+      if (i == 9){break;}
+    }
+}
+
+function ritaHallofFame(){
+    console.log("ritaHallofFame");
+  
+    for (let i = 0; i < hallofFamelist.length; i++){
+      fill(0);
+      textAlign(LEFT);
+      text(highScoreList[i].Namn, 235, 400 + (27 * i));
+      textAlign(RIGHT);
+      text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+      if (i == 9){break;}
+    }
 }
 
 function skickaFB(){
@@ -119,6 +156,9 @@ function gotData(data){
   fill(255);
   rect(230, 370, 150, 285);
 
+  ritaTioiTopp();
+  
+  /*
   for (let i = 0; i < highScoreList.length; i++){
     //console.log("gotData2", highScoreList[i].Namn, highScoreList[i].Poäng);
     fill(0);
@@ -128,6 +168,7 @@ function gotData(data){
     text(highScoreList[i].Poäng, 370, 400 + (27 * i));
     if (i == 9){break;}
   }
+  */
 }
 
 function errData(err){
