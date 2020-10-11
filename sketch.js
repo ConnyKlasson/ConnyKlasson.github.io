@@ -130,7 +130,7 @@ function ritaHallofFame(){
   rect(235, 330, 140, 30);
   fill(0);
   textAlign(CENTER);
-  text("Hall of fame", 295, 355);
+  text("Hall of fame:", 295, 355);
   
   for (let i = 0; i < hallofFamelist.length; i++){
     fill(0);
