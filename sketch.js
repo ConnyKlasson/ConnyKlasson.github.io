@@ -105,8 +105,12 @@ function setup() {
 }
 
 function ritaTioiTopp(){
+  bHallofFame.html("Hall of fame");
   fill(255);
   rect(230, 370, 150, 285);
+  rect(235, 300, 130, 50);
+  textAlign(CENTER);
+  text("Tio i topp:", 310, 355);
   
   for (let i = 0; i < highScoreList.length; i++){
     fill(0);
@@ -119,8 +123,13 @@ function ritaTioiTopp(){
 }
 
 function ritaHallofFame(){
+  bHallofFame.html("Tio i top");
   fill(255);
   rect(230, 370, 150, 285);
+  rect(235, 300, 130, 50);
+  
+  textAlign(CENTER);
+  text("Tio i topp:", 310, 355);
   
   for (let i = 0; i < hallofFamelist.length; i++){
     fill(0);
@@ -155,22 +164,7 @@ function gotData(data){
 
   sortHS();
 
-  //fill(255);
-  //rect(230, 370, 150, 285);
-
   ritaTioiTopp();
-  
-  /*
-  for (let i = 0; i < highScoreList.length; i++){
-    //console.log("gotData2", highScoreList[i].Namn, highScoreList[i].Poäng);
-    fill(0);
-    textAlign(LEFT);
-    text(highScoreList[i].Namn, 235, 400 + (27 * i));
-    textAlign(RIGHT);
-    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
-    if (i == 9){break;}
-  }
-  */
 }
 
 function errData(err){
@@ -201,13 +195,10 @@ function hallofFame(e){
   //console.log("Hall of Fame!");
   
   if (bHallofFame.html() == "Hall of fame"){
-    bHallofFame.html("Tio i top");
     ritaHallofFame();
   }else{
-    bHallofFame.html("Hall of fame");
     ritaTioiTopp();
   }
-  
   e.preventDefault();
 }
 
