@@ -113,7 +113,7 @@ function ritaStatistik(){
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
-    //console.log(statistik);
+    console.log(statistik);
     text(statistik[i], 45 + (27 * i), 710);
   }
 }
