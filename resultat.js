@@ -185,7 +185,7 @@ fyllPrel = function(){
       if (prelResultat[j] > 0 && !resultatRad[j].klar){
         resultatRad[j].resultat = prelResultat[j];
         resultatRad[j].blurb = resultatRad[j].blurb + prelResultat[j];
-        resultatRad[j].rita();
+        //resultatRad[j].rita();
       }
   }
 }
