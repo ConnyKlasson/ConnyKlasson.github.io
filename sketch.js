@@ -58,10 +58,14 @@ function setup() {
   bSkicka = createButton("Skicka");
   bSkicka.mouseReleased(skickaFB);
   bSkicka.elt.style = "position: absolute; left: 425px; top: 225px; display: block;width:160px;height:50px;font-size: 22px";
+  
+  bHallofFame = createButton("Hall of Fame");
+  bNyttSpel.mouseReleased(nyttSpel);
+  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
+  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 665px; display: block;width:200px;height:50px;font-size: 22px";
 
   textAlign(CENTER);
   text("Powered by:", 500, 355);
