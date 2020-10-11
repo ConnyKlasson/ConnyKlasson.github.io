@@ -93,6 +93,10 @@ fyllPrel = function(){
     if (tärningar[i].prickar == 5) prelResultat[4] = prelResultat[4] + 5;
     if (tärningar[i].prickar == 6) prelResultat[5] = prelResultat[5] + 6;
   }
+  
+  for (let i = 0; i < antalTärningar; i++){
+    statistik[i] = statistik[i] ++ prelResultat[i];
+  }
 
   if (prelResultat[0] > 1) prelResultat[8] = 2;
   if (prelResultat[1] > 2) prelResultat[8] = 4;
