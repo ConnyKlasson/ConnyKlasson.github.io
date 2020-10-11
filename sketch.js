@@ -19,7 +19,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas (640, 720);
+  createCanvas (640, 750);
   background(bordimg);
   noLoop();
 
@@ -65,7 +65,7 @@ function setup() {
 
   bNyttSpel = createButton("Nytt spel");
   bNyttSpel.mouseReleased(nyttSpel);
-  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 665px; display: block;width:200px;height:50px;font-size: 22px";
+  bNyttSpel.elt.style = "position: absolute; left: 400px; top: 675px; display: block;width:200px;height:50px;font-size: 22px";
 
   textAlign(CENTER);
   text("Powered by:", 500, 355);
@@ -155,6 +155,13 @@ function sortHS(){
 
 function hallofFame(e){
   console.log("Hall of Fame!");
+  
+  if (bHallofFame.html == "Hall of fame){
+      bHallofFame.html("Tio i Top");
+  }else{
+    bHallofFame.html("Hall of Fame");
+  }
+  
   e.preventDefault();
 }
 
