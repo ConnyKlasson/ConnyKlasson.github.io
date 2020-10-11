@@ -110,7 +110,7 @@ function setup() {
 function ritaStatistik(){
   console.log('ritaStatistik');
   fill(255);
-  
+  noStroke();
   rect(25, 709, 355, 28);
   fill(0);
   textSize(20);
