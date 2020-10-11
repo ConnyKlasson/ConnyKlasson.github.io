@@ -253,14 +253,14 @@ function nyttSlag(e){
     ritaStatistik();
     fyllPrel();
     
-    if (sparaLika.checked() == true){
+    if (sparaLika.checked() == true && slag < 3){
       let markerade = [];
       for (let i = 0; i < antalTärningar; i++){
         if (sparaKnappar[i].checked() == true){
           markerade.push(tärningar[i].prickar);
         }
       }
-      //console.log(markerade);
+
       if (markerade.length > 0){
         
         let allaLIka = true;
