@@ -345,10 +345,10 @@ function nyttSpel(){
   blurbSumma = 0;
   blurbIndex = -1;
   slag = 0;
-  bNyttSlag.hide();
+  bNyttSlag.show();
   bNyttSlag.html("Slag 1");
-  //iNamn.hide();
-  //bSkicka.hide();
+  iNamn.hide();
+  bSkicka.hide();
 
   for (let i = 0; i < antalTärningar; i++){
     tärningar[i].prickar = 0;
