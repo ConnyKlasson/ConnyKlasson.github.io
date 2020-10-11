@@ -156,7 +156,7 @@ function sortHS(){
 function hallofFame(e){
   console.log("Hall of Fame!");
   
-  if (bHallofFame.html == "Hall of fame"){
+  if (bHallofFame.html() == "Hall of fame"){
       bHallofFame.html("Tio i Top");
   }else{
     bHallofFame.html("Hall of Fame");
