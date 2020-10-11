@@ -105,7 +105,6 @@ function setup() {
 }
 
 function ritaStatistik(){
-  console.log("Rita Statistik");
   fill(255);
   rect(25, 660, 345, 65);
   fill(0);
