@@ -116,7 +116,9 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  console.log('SparaKnapp', this.id);
+  if (sparaLika.checked == true){
+    console.log(tärningar[this.id].prickar);
+  }
 }
 
 function ritaStatistik(){
