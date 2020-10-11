@@ -105,11 +105,12 @@ function setup() {
 }
 
 function ritaStatisitk(){
+  console.log("Rita Statistik");
   fill(255);
   rect(25, 700, 300, 50);
   fill(0);
   textAlign(LEFT);
-  text("Ettor:", 30, 353);
+  text("Ettor:", 30, 710);
   
   /*
   for (let i = 0; i < highScoreList.length; i++){
