@@ -108,10 +108,10 @@ function ritaTioiTopp(){
   bHallofFame.html("Hall of fame");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 330, 135, 30);
+  rect(235, 330, 140, 30);
   fill(0);
   textAlign(CENTER);
-  text("Tio i topp:", 310, 355);
+  text("Tio i topp:", 305, 355);
   
   for (let i = 0; i < highScoreList.length; i++){
     fill(0);
@@ -127,10 +127,10 @@ function ritaHallofFame(){
   bHallofFame.html("Tio i top");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 330, 135, 30);
+  rect(235, 330, 140, 30);
   fill(0);
   textAlign(CENTER);
-  text("Hall of fame", 310, 355);
+  text("Hall of fame", 305, 355);
   
   for (let i = 0; i < hallofFamelist.length; i++){
     fill(0);
