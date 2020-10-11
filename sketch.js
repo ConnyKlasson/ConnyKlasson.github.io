@@ -105,29 +105,31 @@ function setup() {
 }
 
 function ritaTioiTopp(){
-    console.log("ritaTioiTopp");
+  fill(255);
+  rect(230, 370, 150, 285);
   
-    for (let i = 0; i < highScoreList.length; i++){
-      fill(0);
-      textAlign(LEFT);
-      text(highScoreList[i].Namn, 235, 400 + (27 * i));
-      textAlign(RIGHT);
-      text(highScoreList[i].Poäng, 370, 400 + (27 * i));
-      if (i == 9){break;}
-    }
+  for (let i = 0; i < highScoreList.length; i++){
+    fill(0);
+    textAlign(LEFT);
+    text(highScoreList[i].Namn, 235, 400 + (27 * i));
+    textAlign(RIGHT);
+    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+    if (i == 9){break;}
+  }
 }
 
 function ritaHallofFame(){
-    console.log("ritaHallofFame");
+  fill(255);
+  rect(230, 370, 150, 285);
   
-    for (let i = 0; i < hallofFamelist.length; i++){
-      fill(0);
-      textAlign(LEFT);
-      text(highScoreList[i].Namn, 235, 400 + (27 * i));
-      textAlign(RIGHT);
-      text(highScoreList[i].Poäng, 370, 400 + (27 * i));
-      if (i == 9){break;}
-    }
+  for (let i = 0; i < hallofFamelist.length; i++){
+    fill(0);
+    textAlign(LEFT);
+    text(highScoreList[i].Namn, 235, 400 + (27 * i));
+    textAlign(RIGHT);
+    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+    if (i == 9){break;}
+  }
 }
 
 function skickaFB(){
@@ -153,8 +155,8 @@ function gotData(data){
 
   sortHS();
 
-  fill(255);
-  rect(230, 370, 150, 285);
+  //fill(255);
+  //rect(230, 370, 150, 285);
 
   ritaTioiTopp();
   
@@ -193,17 +195,17 @@ function sortHS(){
        break;
      }
    }
-  //console.log(highScoreList);
-  //reverse(highScoreList);
 }
 
 function hallofFame(e){
   //console.log("Hall of Fame!");
   
   if (bHallofFame.html() == "Hall of fame"){
-      bHallofFame.html("Tio i top");
+    bHallofFame.html("Tio i top");
+    ritaHallofFame();
   }else{
     bHallofFame.html("Hall of fame");
+    ritaTioiTopp();
   }
   
   e.preventDefault();
