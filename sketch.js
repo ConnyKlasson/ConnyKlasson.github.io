@@ -108,11 +108,9 @@ function setup() {
 
 function ritaStatistik(){
   fill(255);
-  rect(25, 665, 355, 65);
+  rect(25, 710, 355, 35);
   fill(0);
-  textAlign(LEFT);
-  text("Ett:  Två:  Tre:  Fyra:  Fem:  Sex:", 30, 695);
-  
+  textAlign(CENTER);
   /*
   for (let i = 0; i < highScoreList.length; i++){
     fill(0);
