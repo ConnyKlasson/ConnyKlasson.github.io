@@ -253,6 +253,20 @@ function nyttSlag(e){
     }
     ritaStatistik();
     fyllPrel();
+    
+    if (sparaLika.checked() == true){
+      let markerad = -1;
+      for (let i = 0; i < antalTärningar; i++){
+        if (sparaKnappar[i].checked() == true){
+          markerad = tärningar[i].prickar);
+        }
+      }
+      for (let i = 0; i < antalTärningar; i++){
+        if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerad){
+          sparaKnappar[i].checked(true);
+        }
+      }
+    }
 
     if (slag == 1){
       bNyttSlag.html("Slag 2");
