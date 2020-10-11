@@ -331,7 +331,7 @@ function mouseReleased(){
 }
 
 function kollaHS(){
-  console.log(highscoreList);
+  console.log(highScoreList);
   
   if (resultatRad.length > 8){
     if (resultatRad[17].resultat < highScoreList[9].Poäng){
