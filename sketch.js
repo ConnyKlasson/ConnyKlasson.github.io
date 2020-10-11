@@ -116,7 +116,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  console.log('SparaKnapp', SparaKnapp.id);
+  console.log('SparaKnapp', this.id);
 }
 
 function ritaStatistik(){
