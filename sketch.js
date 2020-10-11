@@ -347,8 +347,8 @@ function nyttSpel(){
   slag = 0;
   bNyttSlag.show();
   bNyttSlag.html("Slag 1");
-  iNamn.hide();
-  bSkicka.hide();
+  //iNamn.hide();
+  //bSkicka.hide();
 
   for (let i = 0; i < antalTärningar; i++){
     tärningar[i].prickar = 0;
