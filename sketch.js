@@ -108,13 +108,13 @@ function setup() {
 }
 
 function ritaStatistik(){
-  console.log('riteStatistik');
+  //console.log('ritaStatistik');
   fill(255);
   rect(25, 709, 355, 30);
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
-    text(statistik[i], 60 + (55 * i), 728);
+    text(statistik[i], 60 + (56 * i), 728);
   }
 }
 
