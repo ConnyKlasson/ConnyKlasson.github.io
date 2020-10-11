@@ -90,6 +90,7 @@ function setup() {
   fbRef.on('value', gotData, errData);
 
   nyttSpel();
+  console.log(highScoreList);
 }
 
 function skickaFB(){
