@@ -97,6 +97,7 @@ fyllPrel = function(){
   for (let i = 0; i < statistik.length; i++){
     statistik[i] = statistik[i] + prelResultat[i] / i;
   }
+  ritaStatistik();
 
   if (prelResultat[0] > 1) prelResultat[8] = 2;
   if (prelResultat[1] > 2) prelResultat[8] = 4;
