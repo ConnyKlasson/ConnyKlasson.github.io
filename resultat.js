@@ -82,6 +82,7 @@ fyllPrel = function(){
       if (k < 6){
         resultatRad[k].blurb =  ((k + 1) * 3) * -1;;
       }
+      resultatRad[k].rita();
     }
   }
 
