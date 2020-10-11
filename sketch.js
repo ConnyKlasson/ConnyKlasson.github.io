@@ -116,7 +116,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  if (sparaLika.checked == true){
+  if (sparaLika.checked() == true){
     console.log(tärningar[this.id].prickar);
   }
 }
