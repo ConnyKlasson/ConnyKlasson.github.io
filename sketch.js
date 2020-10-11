@@ -75,7 +75,7 @@ function setup() {
   textAlign(CENTER);
   text("Powered by:", 500, 355);
   image(hdbimg, 400, 385);
-  image(dicesimg  25, 665);
+  image(dicesimg, 25, 665);
 
   let config = {
     apiKey: "AIzaSyBbyL-ScLILVW_1Etzv63hjH9P_QmWvVQ0",
