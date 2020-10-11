@@ -260,7 +260,7 @@ function nyttSlag(e){
           markerade.push(tärningar[i].prickar);
         }
       }
-      
+      console.log(markerade);
       if (markerade.length > 0){
         
         let allaLIka = false;
