@@ -45,7 +45,7 @@ function setup() {
     sparaKnappar[i] = createCheckbox("");
     sparaKnappar[i].position(x - 17, y + 45);
     sparaKnappar[i].elt.firstElementChild.disabled = false;
-    sparaKnappar[i].elt.firstElementChild.style="width:30px;height:30px;";
+    sparaKnappar[i].elt.firstElementChild.style="width:30px; height:30px;";
   }
 
   for (let j = 0; j < 18; j++){
@@ -56,7 +56,7 @@ function setup() {
   
   sparaLika = createCheckbox("Markera lika");
   sparaLika.position(420, 300);
-  sparaLika.elt.firstElementChild.style="width:30px;height:30px;";
+  sparaLika.elt.firstElementChild.style="width:30px; height:30px; font-family: Arial; color: white";
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
