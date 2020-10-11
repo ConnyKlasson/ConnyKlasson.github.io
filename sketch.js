@@ -108,7 +108,7 @@ function setup() {
 }
 
 function ritaStatistik(){
-  console.log('ritaStatistik');
+  //console.log('ritaStatistik');
   fill(255);
   noStroke();
   rect(25, 709, 355, 28);
@@ -345,7 +345,7 @@ function nyttSpel(){
   blurbSumma = 0;
   blurbIndex = -1;
   slag = 0;
-  bNyttSlag.show();
+  bNyttSlag.hide();
   bNyttSlag.html("Slag 1");
   //iNamn.hide();
   //bSkicka.hide();
