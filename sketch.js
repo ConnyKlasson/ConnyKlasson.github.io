@@ -15,7 +15,7 @@ let highScoreList = [];
 let hallofFameList = [];
 let fbData;
 let fbRef;
-let statistik = [];
+let statistik = [0, 0, 0, 0, 0, 0];
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -45,8 +45,6 @@ function setup() {
     sparaKnappar[i].position(x - 17, y + 45);
     sparaKnappar[i].elt.firstElementChild.disabled = false;
     sparaKnappar[i].elt.firstElementChild.style="width:30px;height:30px;";
-    
-    statistik[i] = 0;
   }
 
   for (let j = 0; j < 18; j++){
