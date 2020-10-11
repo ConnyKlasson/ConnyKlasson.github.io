@@ -59,7 +59,7 @@ function setup() {
   bSkicka.mouseReleased(skickaFB);
   bSkicka.elt.style = "position: absolute; left: 425px; top: 225px; display: block;width:160px;height:50px;font-size: 22px";
   
-  bHallofFame = createButton("Hall of Fame");
+  bHallofFame = createButton("Hall of fame");
   bHallofFame.mouseReleased(hallofFame);
   bHallofFame.elt.style = "position: absolute; left: 400px; top: 605px; display: block;width:200px;height:50px;font-size: 22px";
 
