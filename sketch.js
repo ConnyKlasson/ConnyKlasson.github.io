@@ -125,9 +125,9 @@ function ritaHallofFame(){
   for (let i = 0; i < hallofFamelist.length; i++){
     fill(0);
     textAlign(LEFT);
-    text(highScoreList[i].Namn, 235, 400 + (27 * i));
+    text(hallofFamelist[i].Namn, 235, 400 + (27 * i));
     textAlign(RIGHT);
-    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+    text(hallofFamelist[i].Poäng, 370, 400 + (27 * i));
     if (i == 9){break;}
   }
 }
