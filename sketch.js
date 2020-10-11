@@ -109,7 +109,7 @@ function ritaStatistik(){
   rect(25, 665, 355, 65);
   fill(0);
   textAlign(LEFT);
-  text("Ett: Två: Tre: Fyra: Fem: Sex:", 30, 700);
+  text("Ett:  Två:  Tre:  Fyra:  Fem:  Sex:", 30, 695);
   
   /*
   for (let i = 0; i < highScoreList.length; i++){
