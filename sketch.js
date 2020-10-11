@@ -112,16 +112,9 @@ function ritaStatistik(){
   rect(25, 709, 355, 35);
   fill(0);
   textAlign(CENTER);
-  /*
-  for (let i = 0; i < highScoreList.length; i++){
-    fill(0);
-    textAlign(LEFT);
-    text(highScoreList[i].Namn, 235, 400 + (27 * i));
-    textAlign(RIGHT);
-    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
-    if (i == 9){break;}
+  for (let i = 0; i < antalTärningar; i++){
+    text(statistik[i] 710, 45 + (27 * i));
   }
-  */
 }
 
 function ritaTioiTopp(){
