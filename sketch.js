@@ -46,6 +46,7 @@ function setup() {
     sparaKnappar[i].position(x - 17, y + 45);
     sparaKnappar[i].elt.firstElementChild.disabled = false;
     sparaKnappar[i].elt.firstElementChild.style="width:30px; height:30px;";
+    sparaKnappar[i].mouseReleased(sparaKnapp);
   }
 
   for (let j = 0; j < 18; j++){
@@ -79,7 +80,7 @@ function setup() {
 
   textAlign(CENTER);
   text("Powered by:", 500, 370);
-  text("Markera lika", 520, 320);
+  text("Markera lika", 525, 323);
   image(hdbimg, 400, 390);
   image(dicesimg, 25, 665);
 
@@ -111,6 +112,10 @@ function setup() {
 
   nyttSpel();
   ritaStatistik();
+}
+
+function sparaKnapp(e){
+  console.log('SparaKnapp', e);
 }
 
 function ritaStatistik(){
