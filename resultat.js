@@ -95,7 +95,7 @@ fyllPrel = function(){
   }
   
   for (let i = 0; i < statistik.length; i++){
-    statistik[i] = statistik[i] + prelResultat[i] / i;
+    statistik[i] = statistik[i] + prelResultat[i] / (i + 1);
   }
   ritaStatistik();
 
