@@ -19,7 +19,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas (640, 680);
+  createCanvas (640, 700;
   background(bordimg);
   noLoop();
 
