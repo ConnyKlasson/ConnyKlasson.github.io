@@ -113,7 +113,7 @@ function ritaStatistik(){
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
-    text(statistik[i], 60 + (52 * i), 728);
+    text(statistik[i], 60 + (54 * i), 728);
   }
 }
 
@@ -227,7 +227,7 @@ function nyttSlag(e){
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
-        statistik[tärningar[i].prickar] ++;
+        statistik[tärningar[i].prickar - 1] ++;
       }
     }
     ritaStatistik();
@@ -248,7 +248,6 @@ function nyttSlag(e){
 }
 
 function mouseReleased(){
-
   let rad = resultatTräff();
   if (rad > -1 && slag > 0 && !resultatRad[rad].klar){
    
