@@ -72,7 +72,7 @@ function setup() {
 
   textAlign(CENTER);
   text("Powered by:", 500, 355);
-  text("Tio i topp:", 310, 355);
+  //text("Tio i topp:", 310, 355);
   image(hdbimg, 400, 385);
 
   let config = {
@@ -108,7 +108,7 @@ function ritaTioiTopp(){
   bHallofFame.html("Hall of fame");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 310, 135, 40);
+  rect(235, 320, 135, 30);
   fill(0);
   textAlign(CENTER);
   text("Tio i topp:", 310, 355);
@@ -127,7 +127,7 @@ function ritaHallofFame(){
   bHallofFame.html("Tio i top");
   fill(255);
   rect(230, 370, 150, 285);
-  rect(235, 310, 135, 40);
+  rect(235, 320, 135, 30);
   fill(0);
   textAlign(CENTER);
   text("Tio i topp:", 310, 355);
