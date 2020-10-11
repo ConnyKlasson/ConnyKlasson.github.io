@@ -107,7 +107,7 @@ function setup() {
 function ritaStatistik(){
   console.log("Rita Statistik");
   fill(255);
-  rect(25, 650, 330, 50);
+  rect(25, 655, 335, 60);
   fill(0);
   textAlign(LEFT);
   text("Ettor:", 30, 710);
