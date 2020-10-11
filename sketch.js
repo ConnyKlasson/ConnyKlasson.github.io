@@ -72,7 +72,6 @@ function setup() {
 
   textAlign(CENTER);
   text("Powered by:", 500, 355);
-  //text("Tio i topp:", 310, 355);
   image(hdbimg, 400, 385);
 
   let config = {
@@ -102,6 +101,26 @@ function setup() {
   ];
 
   nyttSpel();
+  ritaStatistik();
+}
+
+function ritaStatisitk(){
+  fill(255);
+  rect(25, 700, 300, 50);
+  fill(0);
+  textAlign(LEFT);
+  text("Ettor:", 30, 353);
+  
+  /*
+  for (let i = 0; i < highScoreList.length; i++){
+    fill(0);
+    textAlign(LEFT);
+    text(highScoreList[i].Namn, 235, 400 + (27 * i));
+    textAlign(RIGHT);
+    text(highScoreList[i].Poäng, 370, 400 + (27 * i));
+    if (i == 9){break;}
+  }
+  */
 }
 
 function ritaTioiTopp(){
