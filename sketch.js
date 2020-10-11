@@ -260,10 +260,10 @@ function nyttSlag(e){
           markerade.push(tärningar[i].prickar);
         }
       }
-      console.log(markerade);
+      //console.log(markerade);
       if (markerade.length > 0){
         
-        let allaLIka = false;
+        let allaLIka = true;
         for (let i = 1; i < markerade.length; i++){
           if (markerade[0] != markerade[i]){
             allaLIka = false;
