@@ -79,7 +79,7 @@ function setup() {
 
   textAlign(CENTER);
   text("Powered by:", 500, 370);
-  text("Markera lika tärningar:", 500, 300);
+  text("Markera lika", 520, 320);
   image(hdbimg, 400, 390);
   image(dicesimg, 25, 665);
 
