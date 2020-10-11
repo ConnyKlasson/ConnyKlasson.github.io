@@ -94,7 +94,7 @@ fyllPrel = function(){
     if (tärningar[i].prickar == 6) prelResultat[5] = prelResultat[5] + 6;
   }
   
-  for (let i = 0; i < antalTärningar; i++){
+  for (let i = 0; i < statistik.length; i++){
     statistik[i] = statistik[i] + prelResultat[i] / i;
   }
 
