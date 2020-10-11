@@ -113,8 +113,7 @@ function ritaStatistik(){
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
-    //console.log(statistik);
-    text(statistik[i], 55 + (40 * i), 720);
+    text(statistik[i], 57 + (45 * i), 725);
   }
 }
 
