@@ -15,6 +15,7 @@ let highScoreList = [];
 let hallofFameList = [];
 let fbData;
 let fbRef;
+let statistk = [];
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -74,7 +75,7 @@ function setup() {
   textAlign(CENTER);
   text("Powered by:", 500, 355);
   image(hdbimg, 400, 385);
-  image(dicesimg, 25, 665);
+  image(dicesimg  25, 665);
 
   let config = {
     apiKey: "AIzaSyBbyL-ScLILVW_1Etzv63hjH9P_QmWvVQ0",
@@ -108,7 +109,7 @@ function setup() {
 
 function ritaStatistik(){
   fill(255);
-  rect(25, 710, 355, 35);
+  rect(25, 709, 355, 35);
   fill(0);
   textAlign(CENTER);
   /*
