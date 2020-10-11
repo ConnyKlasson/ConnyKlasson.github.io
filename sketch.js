@@ -56,7 +56,7 @@ function setup() {
   
   sparaLika = createCheckbox("Markera lika");
   sparaLika.position(420, 300);
-  sparaLika.elt.firstElementChild.style="width:30px; height:30px; ";
+  sparaLika.elt.firstElementChild.style="color:white;  width:30px; height:30px; ";
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
