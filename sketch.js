@@ -109,11 +109,11 @@ function setup() {
 
 function ritaStatistik(){
   fill(255);
-  rect(25, 709, 355, 35);
+  rect(25, 709, 355, 32);
   fill(0);
   textAlign(CENTER);
   for (let i = 0; i < statistik.length; i++){
-    text(statistik[i], 57 + (45 * i), 725);
+    text(statistik[i], 60 + (50 * i), 728);
   }
 }
 
