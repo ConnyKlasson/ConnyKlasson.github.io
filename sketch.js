@@ -54,9 +54,9 @@ function setup() {
     resultatRad[j] = new resultatRuta(x, y, j);
   }
   
-  sparaLika = createCheckbox("Markera lika");
+  sparaLika = createCheckbox("");
   sparaLika.position(420, 300);
-  sparaLika.elt.firstElementChild.style="color:white;  width:30px; height:30px; ";
+  sparaLika.elt.firstElementChild.style="width:30px; height:30px; ";
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
@@ -79,6 +79,7 @@ function setup() {
 
   textAlign(CENTER);
   text("Powered by:", 500, 370);
+  text("Markera lika tärningar:", 500, 300);
   image(hdbimg, 400, 390);
   image(dicesimg, 25, 665);
 
