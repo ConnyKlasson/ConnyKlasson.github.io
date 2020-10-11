@@ -15,7 +15,7 @@ let highScoreList = [];
 let hallofFameList = [];
 let fbData;
 let fbRef;
-let statistk = [];
+let statistik = [];
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
