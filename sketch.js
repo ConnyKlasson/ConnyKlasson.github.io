@@ -331,7 +331,7 @@ function mouseReleased(){
 }
 
 function kollaHS(){
-  if (resultatRad[17].resultat > highScoreList[9].Poäng){
+  if (if resultatRad.length < 9 || resultatRad[17].resultat > highScoreList[9].Poäng){
     //console.log(resultatRad[17].resultat, highScoreList[9].Poäng);
     iNamn.show();
     bSkicka.show();
