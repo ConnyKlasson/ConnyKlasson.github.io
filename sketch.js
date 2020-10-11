@@ -255,16 +255,31 @@ function nyttSlag(e){
     fyllPrel();
     
     if (sparaLika.checked() == true){
-      let markerad = -1;
+      let markerade = [];
       for (let i = 0; i < antalTärningar; i++){
         if (sparaKnappar[i].checked() == true){
-          markerad = tärningar[i].prickar;
+          markerade.push(tärningar[i].prickar);
         }
       }
-      for (let i = 0; i < antalTärningar; i++){
-        if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerad){
-          sparaKnappar[i].checked(true);
+      
+      if (markerade.length > 0){
+        
+        let allaLIka = false;
+        for (let i = 1; i < markerade.length; i++){
+          if (markerade[0] != markerade[i]){
+            allaLIka = false;
+            break;
+          }
         }
+
+        if (allaLIka){
+          for (let i = 0; i < antalTärningar; i++){
+            if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerade[0]){
+              sparaKnappar[i].checked(true);
+            }
+          }
+        }
+        
       }
     }
 
