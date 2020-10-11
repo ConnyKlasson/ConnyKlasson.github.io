@@ -3,9 +3,11 @@ let antalTärningar = 5;
 let tSize = 70;
 let pSize = 15;
 let bNyttSlag;
+let bHallofFame;
 let bNyttSpel;
 let bSkicka;
 let iNamn;
+let iHallofFame;
 let sparaKnappar = [];
 let resultatRad = [];
 let slag;
@@ -157,7 +159,7 @@ function hallofFame(e){
   //console.log("Hall of Fame!");
   
   if (bHallofFame.html() == "Hall of fame"){
-      bHallofFame.html("Tio i Top");
+      bHallofFame.html("Tio i top");
   }else{
     bHallofFame.html("Hall of fame");
   }
