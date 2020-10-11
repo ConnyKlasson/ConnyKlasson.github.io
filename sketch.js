@@ -78,7 +78,7 @@ function setup() {
   bNyttSpel.elt.style = "position: absolute; left: 400px; top: 675px; display: block;width:200px;height:50px;font-size: 22px";
 
   textAlign(CENTER);
-  text("Powered by:", 500, 365);
+  text("Powered by:", 500, 370);
   image(hdbimg, 400, 390);
   image(dicesimg, 25, 665);
 
