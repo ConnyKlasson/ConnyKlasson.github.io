@@ -115,6 +115,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
+  console.log(this.checked();
   if (sparaLika.checked() == true){
     for (let i = 0; i < antalTärningar; i++){
       if (this.id != i && tärningar[i].prickar == tärningar[this.id].prickar){
