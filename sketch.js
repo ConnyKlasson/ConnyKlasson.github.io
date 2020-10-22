@@ -18,6 +18,12 @@ let fbRef;
 let statistik = [0, 0, 0, 0, 0, 0];
 let sparaLika;
 
+let numRolls = 10;
+let rollCount;
+let timeRoll;
+let lastTime;
+let accumulator;
+
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
   bordimg = loadImage("bord.png");
@@ -237,6 +243,25 @@ function hallofFame(e){
   e.preventDefault();
 }
 
+const step = 1/10;
+const callback = (millis) => {
+    if (lastTime){
+        accumulator += (millis - lastTime) / 1000;
+        while (accumulator > step){
+            if (rollCount < numRolls){
+              tärningar[i].rulla();
+              tärningar[i].rita(i);
+            }else{
+                bNyttSlag.elt.firstElementChild.disabled = false;
+            }
+            accumulator -= step;
+        }
+    }
+    lastTime = millis;
+
+    requestAnimationFrame(callback);
+};
+
 function nyttSlag(e){
   if (slag < 3){
     slag ++;
@@ -246,8 +271,13 @@ function nyttSlag(e){
         sparaKnappar[i].elt.firstElementChild.disabled = false;
       }
       if (sparaKnappar[i].checked() == false){
-        tärningar[i].rulla();
-        tärningar[i].rita(i);
+        //tärningar[i].rulla();
+        //tärningar[i].rita(i);
+        bNyttSlag.elt.firstElementChild.disabled = true;
+        accumulator = 0;
+        rollCount = 0;
+        requestAnimationFrame(callback);
+        
         statistik[tärningar[i].prickar - 1] ++;
       }
     }
