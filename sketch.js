@@ -264,11 +264,11 @@ const callback = (millis) => {
 };
 
 function rollDices(){
-    console.log('rollDices 3');
-      for (let i = 0; i < antalTärningar; i++){
-      if (slag == 1){
-        sparaKnappar[i].elt.firstElementChild.disabled = false;
-      }
+    //console.log('rollDices 3');
+  for (let i = 0; i < antalTärningar; i++){
+    if (slag == 1){
+      sparaKnappar[i].elt.firstElementChild.disabled = false;
+    }
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
@@ -280,9 +280,12 @@ function rollDices(){
 }
 
 function nyttSlag(e){
+  console.log('nyttSlag 1');
   if (rolling){
     return;
   }
+  console.log('nyttSlag 2');
+  
   if (slag < 3){
     slag ++;
     
@@ -309,7 +312,7 @@ function nyttSlag(e){
       }
     }
     */
-    
+    console.log('nyttSlag 3');
     ritaStatistik();
     fyllPrel();
     
