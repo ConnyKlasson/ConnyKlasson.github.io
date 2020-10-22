@@ -280,7 +280,7 @@ function rollDices(){
 }
 
 function nyttSlag(e){
-  console.log('nyttSlag 1');
+  //console.log('nyttSlag 1');
   if (rolling){
     return;
   }
