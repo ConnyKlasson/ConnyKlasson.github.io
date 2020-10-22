@@ -258,7 +258,7 @@ const callback = (millis) => {
                   statistik[tärningar[i].prickar - 1] ++;
                 }
                 ritaStatistik();
-                bNyttSlag.disabled = false;
+                bNyttSlag.elt.disabled = false;
                 //bNyttSlag.show();
               }
               rolling = false;
@@ -295,7 +295,7 @@ function nyttSlag(e){
     slag ++;
         
     rolling = true;
-    bNyttSlag.disabled = true;
+    bNyttSlag.elt.disabled = true;
     //bNyttSlag.hide();
     accumulator = 0;
     rollCount = 0;
