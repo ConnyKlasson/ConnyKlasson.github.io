@@ -256,6 +256,7 @@ const callback = (millis) => {
                 ritaStatistik();
                 fyllPrel();
                 bNyttSlag.disabled = false;
+                bNyttSlag.show();
               }
               rolling = false;
             }
@@ -292,6 +293,7 @@ function nyttSlag(e){
         
     rolling = true;
     bNyttSlag.disabled = true;
+    bNyttSlag.hide();
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
