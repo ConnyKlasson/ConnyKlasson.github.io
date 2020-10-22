@@ -254,6 +254,8 @@ const callback = (millis) => {
             }else{
                 //btn.disabled = false;
                 rolling = false;
+                ritaStatistik();
+                fyllPrel();
             }
             accumulator -= step;
         }
@@ -284,7 +286,7 @@ function nyttSlag(e){
   if (rolling){
     return;
   }
-  console.log('nyttSlag 2');
+  //console.log('nyttSlag 2');
   
   if (slag < 3){
     slag ++;
@@ -313,8 +315,8 @@ function nyttSlag(e){
     }
     */
     console.log('nyttSlag 3');
-    ritaStatistik();
-    fyllPrel();
+    //ritaStatistik();
+    //fyllPrel();
     
     if (sparaLika.checked() == true && slag < 3){
       let markerade = [];
