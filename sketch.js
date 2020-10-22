@@ -257,7 +257,7 @@ const callback = (millis) => {
                 fyllPrel();
               }
               rolling = false;
-              bNyttSlag.elt.firstElementChild.disabled = false;
+              bNyttSlag.disabled = false;
             }
             accumulator -= step;
         }
@@ -292,7 +292,7 @@ function nyttSlag(e){
     slag ++;
         
     rolling = true;
-    bNyttSlag.elt.firstElementChild.disabled = true;
+    bNyttSlag.disabled = true;
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
