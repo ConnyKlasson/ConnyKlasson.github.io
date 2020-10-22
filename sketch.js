@@ -252,10 +252,12 @@ const callback = (millis) => {
             if (rollCount < numRolls){
                 rollDices();
             }else{
-                //btn.disabled = false;
-                rolling = false;
+              //btn.disabled = false;
+              if (rolling){
                 ritaStatistik();
                 fyllPrel();
+              }
+              rolling = false;
             }
             accumulator -= step;
         }
