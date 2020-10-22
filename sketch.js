@@ -255,8 +255,8 @@ const callback = (millis) => {
               if (rolling){
                 ritaStatistik();
                 fyllPrel();
-                bNyttSlag.disabled = false;
-                bNyttSlag.show();
+                //bNyttSlag.disabled = false;
+                //bNyttSlag.show();
               }
               rolling = false;
             }
