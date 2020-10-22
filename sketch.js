@@ -23,6 +23,7 @@ let rollCount;
 let timeRoll;
 let lastTime;
 let accumulator;
+let rolling = false;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
