@@ -264,7 +264,7 @@ const callback = (millis) => {
 };
 
 function rollDices(){
-    console.log('rollDices 2');
+    console.log('rollDices 3');
       for (let i = 0; i < antalTärningar; i++){
       if (slag == 1){
         sparaKnappar[i].elt.firstElementChild.disabled = false;
@@ -276,6 +276,7 @@ function rollDices(){
         statistik[tärningar[i].prickar - 1] ++;
       }
     }
+  rollCount ++;
 }
 
 function nyttSlag(e){
