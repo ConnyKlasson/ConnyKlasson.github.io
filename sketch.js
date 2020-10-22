@@ -18,7 +18,7 @@ let fbRef;
 let statistik = [0, 0, 0, 0, 0, 0];
 let sparaLika;
 
-let numRolls = 10;
+let numRolls = 30;
 let rollCount;
 let timeRoll;
 let lastTime;
@@ -255,15 +255,14 @@ const callback = (millis) => {
               if (rolling){
                 ritaStatistik();
                 fyllPrel();
+                bNyttSlag.disabled = false;
               }
               rolling = false;
-              bNyttSlag.disabled = false;
             }
             accumulator -= step;
         }
     }
     lastTime = millis;
-
     requestAnimationFrame(callback);
 };
 
