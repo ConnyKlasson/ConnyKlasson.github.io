@@ -18,12 +18,13 @@ let fbRef;
 let statistik = [0, 0, 0, 0, 0, 0];
 let sparaLika;
 
-let numRolls = 10;
+let numRolls = 15;
 let rollCount;
 let timeRoll;
 let lastTime;
 let accumulator;
 let rolling = false;
+const step = 1/15;
 
 function preload() {
   hdbimg = loadImage("HappyDuckBar.png");
@@ -244,7 +245,6 @@ function hallofFame(e){
   e.preventDefault();
 }
 
-const step = 1/20;
 const callback = (millis) => {
     if (lastTime){
         accumulator += (millis - lastTime) / 1000;
