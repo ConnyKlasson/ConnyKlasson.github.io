@@ -243,8 +243,27 @@ function hallofFame(e){
   e.preventDefault();
 }
 
+const step = 1/10;
+const callback = (millis) => {
+    if (lastTime){
+        accumulator += (millis - lastTime) / 1000;
+        while (accumulator > step){
+            if (rollCount < numRolls){
+                rollDices();
+            }else{
+                //btn.disabled = false;
+                rolling = false;
+            }
+            accumulator -= step;
+        }
+    }
+    lastTime = millis;
+
+    requestAnimationFrame(callback);
+};
+
 function rollDices(){
-    console.log('rollDices');
+    console.log('rollDices 2');
       for (let i = 0; i < antalTärningar; i++){
       if (slag == 1){
         sparaKnappar[i].elt.firstElementChild.disabled = false;
@@ -259,10 +278,21 @@ function rollDices(){
 }
 
 function nyttSlag(e){
+  if (rolling){
+    return;
+  }
   if (slag < 3){
     slag ++;
     
-    rollDices();
+        
+    rolling = true;
+    //btn.innerHTML = "Rolling"
+    //btn.disabled = true;
+    accumulator = 0;
+    rollCount = 0;
+    requestAnimationFrame(callback);
+    
+    //rollDices();
 
     /*
     for (let i = 0; i < antalTärningar; i++){
