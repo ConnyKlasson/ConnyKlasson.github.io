@@ -187,7 +187,6 @@ function skickaFB(){
   let data = {Name:iNamn.value(), Point:resultatRad[17].resultat};
   //console.log("SkickFB", data.Name, data.Point);
   fbRef.push(data);
-  console.log('show 1');
   bNyttSlag.show();
   iNamn.hide();
   bSkicka.hide();
@@ -259,7 +258,7 @@ const callback = (millis) => {
                   statistik[tärningar[i].prickar - 1] ++;
                 }
                 ritaStatistik();
-                //bNyttSlag.disabled = false;
+                bNyttSlag.disabled = false;
                 //bNyttSlag.show();
               }
               rolling = false;
@@ -297,7 +296,7 @@ function nyttSlag(e){
         
     rolling = true;
     bNyttSlag.disabled = true;
-    bNyttSlag.hide();
+    //bNyttSlag.hide();
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
@@ -462,7 +461,6 @@ function nyttSpel(){
   blurbSumma = 0;
   blurbIndex = -1;
   slag = 0;
-  console.log('show 2');
   bNyttSlag.show();
   bNyttSlag.html("Slag 1");
   iNamn.hide();
