@@ -187,6 +187,7 @@ function skickaFB(){
   let data = {Name:iNamn.value(), Point:resultatRad[17].resultat};
   //console.log("SkickFB", data.Name, data.Point);
   fbRef.push(data);
+  console.log('show 1');
   bNyttSlag.show();
   iNamn.hide();
   bSkicka.hide();
@@ -461,6 +462,7 @@ function nyttSpel(){
   blurbSumma = 0;
   blurbIndex = -1;
   slag = 0;
+  console.log('show 2');
   bNyttSlag.show();
   bNyttSlag.html("Slag 1");
   iNamn.hide();
