@@ -18,7 +18,7 @@ let fbRef;
 let statistik = [0, 0, 0, 0, 0, 0];
 let sparaLika;
 
-let numRolls = 30;
+let numRolls = 10;
 let rollCount;
 let timeRoll;
 let lastTime;
@@ -279,8 +279,6 @@ function rollDices(){
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
-        
-        //statistik[tärningar[i].prickar - 1] ++;
       }
     }
   rollCount ++;
@@ -296,29 +294,9 @@ function nyttSlag(e){
         
     rolling = true;
     bNyttSlag.elt.disabled = true;
-    //bNyttSlag.hide();
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
-    
-    //rollDices();
-
-    /*
-    for (let i = 0; i < antalTärningar; i++){
-      if (slag == 1){
-        sparaKnappar[i].elt.firstElementChild.disabled = false;
-      }
-      if (sparaKnappar[i].checked() == false){
-        tärningar[i].rulla();
-        tärningar[i].rita(i);
-        
-        statistik[tärningar[i].prickar - 1] ++;
-      }
-    }
-    */
-
-    //ritaStatistik();
-    //fyllPrel();
     
     if (sparaLika.checked() == true && slag < 3){
       let markerade = [];
@@ -345,7 +323,6 @@ function nyttSlag(e){
             }
           }
         }
-        
       }
     }
 
