@@ -244,7 +244,7 @@ function hallofFame(e){
   e.preventDefault();
 }
 
-const step = 1/10;
+const step = 1/20;
 const callback = (millis) => {
     if (lastTime){
         accumulator += (millis - lastTime) / 1000;
@@ -252,12 +252,12 @@ const callback = (millis) => {
             if (rollCount < numRolls){
                 rollDices();
             }else{
-              //btn.disabled = false;
               if (rolling){
                 ritaStatistik();
                 fyllPrel();
               }
               rolling = false;
+              bNyttSlag.elt.firstElementChild.disabled = false;
             }
             accumulator -= step;
         }
@@ -284,19 +284,15 @@ function rollDices(){
 }
 
 function nyttSlag(e){
-  //console.log('nyttSlag 1');
   if (rolling){
     return;
   }
-  //console.log('nyttSlag 2');
   
   if (slag < 3){
     slag ++;
-    
         
     rolling = true;
-    //btn.innerHTML = "Rolling"
-    //btn.disabled = true;
+    bNyttSlag.elt.firstElementChild.disabled = true;
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
@@ -316,7 +312,7 @@ function nyttSlag(e){
       }
     }
     */
-    console.log('nyttSlag 3');
+
     //ritaStatistik();
     //fyllPrel();
     
