@@ -253,8 +253,11 @@ const callback = (millis) => {
                 rollDices();
             }else{
               if (rolling){
-                ritaStatistik();
                 fyllPrel();
+                for (let i = 0; i < antalTärningar; i++){
+                  statistik[tärningar[i].prickar - 1] ++;
+                }
+                ritaStatistik();
                 //bNyttSlag.disabled = false;
                 //bNyttSlag.show();
               }
@@ -277,7 +280,7 @@ function rollDices(){
         tärningar[i].rulla();
         tärningar[i].rita(i);
         
-        statistik[tärningar[i].prickar - 1] ++;
+        //statistik[tärningar[i].prickar - 1] ++;
       }
     }
   rollCount ++;
