@@ -71,7 +71,7 @@ function resultatRuta(x, y, rad){
 }
 
 fyllPrel = function(){
-  console.log('fyllprel');
+  //console.log('fyllprel');
   let prelResultat = [];
 
   for (let k = 0; k < 18; k++){
