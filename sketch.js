@@ -236,7 +236,6 @@ function sortHS(){
 
 function hallofFame(e){
   //console.log("Hall of Fame!");
-  
   if (bHallofFame.html() == "Hall of fame"){
     ritaHallofFame();
   }else{
@@ -279,7 +278,7 @@ function rollDices(){
 }
 
 function rollDicesKlart(){
-  console.log('rollDicesKlart');
+  //console.log('rollDicesKlart');
   fyllPrel();
   for (let i = 0; i < antalTärningar; i++){
     statistik[tärningar[i].prickar - 1] ++;
