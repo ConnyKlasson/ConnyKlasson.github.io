@@ -287,7 +287,6 @@ function rollDicesKlart(){
   ritaStatistik();
   bNyttSlag.elt.disabled = false;
 
-  //TEST
   if (sparaLika.checked() == true && slag < 3){
     let markerade = [];
     for (let i = 0; i < antalTärningar; i++){
@@ -326,7 +325,6 @@ function rollDicesKlart(){
       sparaKnappar[i].elt.firstElementChild.disabled = true;
     }
   }
-    //TEST
 }
 
 function nyttSlag(e){
@@ -342,47 +340,6 @@ function nyttSlag(e){
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
-    
-    /*
-    if (sparaLika.checked() == true && slag < 3){
-      let markerade = [];
-      for (let i = 0; i < antalTärningar; i++){
-        if (sparaKnappar[i].checked() == true){
-          markerade.push(tärningar[i].prickar);
-        }
-      }
-
-      if (markerade.length > 0){
-        
-        let allaLIka = true;
-        for (let i = 1; i < markerade.length; i++){
-          if (markerade[0] != markerade[i]){
-            allaLIka = false;
-            break;
-          }
-        }
-
-        if (allaLIka){
-          for (let i = 0; i < antalTärningar; i++){
-            if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerade[0]){
-              sparaKnappar[i].checked(true);
-            }
-          }
-        }
-      }
-    }
-
-    if (slag == 1){
-      bNyttSlag.html("Slag 2");
-    }else if (slag == 2){
-      bNyttSlag.html("Slag 3");
-    }else if (slag == 3){
-      bNyttSlag.html("Klicka på önskad poäng")
-      for (let i = 0; i < antalTärningar; i++){
-        sparaKnappar[i].elt.firstElementChild.disabled = true;
-      }
-    }
-    */
   }
   e.preventDefault();
 }
