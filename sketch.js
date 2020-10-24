@@ -281,7 +281,9 @@ function rollDicesKlart(){
   //console.log('rollDicesKlart');
   fyllPrel();
   for (let i = 0; i < antalTärningar; i++){
-    statistik[tärningar[i].prickar - 1] ++;
+    if (sparaKnappar[i].checked() == false){
+      statistik[tärningar[i].prickar - 1] ++;
+    }
   }
   ritaStatistik();
   bNyttSlag.elt.disabled = false;
