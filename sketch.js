@@ -309,7 +309,7 @@ function rollDicesKlart(){
   ritaStatistik();
   bNyttSlag.elt.disabled = false;
   for (let i = 0; i < antalTärningar; i++){
-      sparaKnappar[i].elt.firstElementChild.disabled = fase;
+      sparaKnappar[i].elt.firstElementChild.disabled = false;
   }
 
   if (sparaLika.checked() == true && slag < 3){
