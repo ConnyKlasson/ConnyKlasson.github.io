@@ -133,6 +133,7 @@ function sparaKnapp(e){
     }
     if (sparaKnappar[i].checked()){
       antal ++;
+      console.log(antal);
     }
   }
   if (antal < antalTärningar){
