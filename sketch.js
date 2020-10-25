@@ -131,7 +131,7 @@ function sparaKnapp(e){
         sparaKnappar[i].checked(true);
       }
     }
-    if (sparaKnappar[i].checked(true)){
+    if (sparaKnappar[i].checked()){
       antal ++;
     }
   }
@@ -307,6 +307,9 @@ function rollDicesKlart(){
   }
   ritaStatistik();
   bNyttSlag.elt.disabled = false;
+  for (let i = 0; i < antalTärningar; i++){
+      sparaKnappar[i].elt.firstElementChild.disabled = fase;
+  }
 
   if (sparaLika.checked() == true && slag < 3){
     let markerade = [];
@@ -358,6 +361,9 @@ function nyttSlag(e){
         
     rolling = true;
     bNyttSlag.elt.disabled = true;
+    for (let i = 0; i < antalTärningar; i++){
+      sparaKnappar[i].elt.firstElementChild.disabled = true;
+    }
     accumulator = 0;
     rollCount = 0;
     requestAnimationFrame(callback);
