@@ -326,12 +326,7 @@ function rollDicesKlart(){
         let antal = 0;
         for (let i = 0; i < antalTärningar; i++){
           if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerade[0]){
-            antal ++;
-            console.log(antal);
             sparaKnappar[i].checked(true);
-            if (antal == antalTärningar){
-              bNyttSlag.elt.disabled = true;
-            }
           }
         }
       }
