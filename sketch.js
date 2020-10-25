@@ -330,8 +330,8 @@ function rollDicesKlart(){
       }
 
     }
-    console.log(markerade.length);
-    if (markerade.length < antalTärningar){
+    console.log(markerade.length, slag);
+    if (markerade.length < antalTärningar || slag == 1){
       bNyttSlag.elt.disabled = false;
     }
   }
