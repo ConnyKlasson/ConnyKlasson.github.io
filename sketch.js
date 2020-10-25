@@ -123,8 +123,8 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  //console.log(this.checked());
-  let antal = 0;
+  console.log(this.checked());
+  
   if (sparaLika.checked() == true && !this.checked()){
     for (let i = 0; i < antalTärningar; i++){
       if (this.id != i && tärningar[i].prickar == tärningar[this.id].prickar){
@@ -133,6 +133,7 @@ function sparaKnapp(e){
     }
   }
   
+  let antal = 0;
   for (let i = 0; i < antalTärningar; i++){
     if (sparaKnappar[i].checked()){
       antal ++;
