@@ -322,7 +322,7 @@ function rollDicesKlart(){
       }
 
       if (allaLIka){
-        let antal 0;
+        let antal = 0;
         for (let i = 0; i < antalTärningar; i++){
           if (sparaKnappar[i].checked() == false && tärningar[i].prickar == markerade[0]){
             antal ++;
