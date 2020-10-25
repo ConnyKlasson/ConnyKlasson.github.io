@@ -137,7 +137,6 @@ function sparaKnapp(e){
   for (let i = 0; i < antalTärningar; i++){
     if (sparaKnappar[i].checked() == true){
       antal ++;
-      console.log(antal);
     }
   }
   
