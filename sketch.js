@@ -284,9 +284,9 @@ const callback = (millis) => {
 function rollDices(){
     //console.log('rollDices 3');
   for (let i = 0; i < antalTärningar; i++){
-    if (slag == 1){
-      sparaKnappar[i].elt.firstElementChild.disabled = false;
-    }
+    //if (slag == 1){
+    //  sparaKnappar[i].elt.firstElementChild.disabled = false;
+    //}
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
