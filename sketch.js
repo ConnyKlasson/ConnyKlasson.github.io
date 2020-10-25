@@ -132,10 +132,11 @@ function sparaKnapp(e){
       }
     }
   }
+  console.log(this.checked());
   
   let antal = 0;
   for (let i = 0; i < antalTärningar; i++){
-    if (sparaKnappar[i].checked()){
+    if (sparaKnappar[i].checked() == true){
       antal ++;
       console.log(antal);
     }
