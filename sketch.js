@@ -123,7 +123,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  console.log(this.checked(), e);
+  //console.log(this.checked(), e);
   
   if (sparaLika.checked() == true && !this.checked()){
     this.checked(true);
@@ -133,17 +133,16 @@ function sparaKnapp(e){
       }
     }
   }
-  console.log(this.checked());
   
   let antal = 0;
   for (let i = 0; i < antalTärningar; i++){
     if (sparaKnappar[i].checked() == true){
       antal ++;
-      console.log(antal);
+      //console.log(antal);
     }
   }
   
-  if (antal < antalTärningar){
+  if (antal < antalTärningar - 1){
     bNyttSlag.elt.disabled = false;
   }
   else{
