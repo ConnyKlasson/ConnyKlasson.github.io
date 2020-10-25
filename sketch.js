@@ -141,7 +141,7 @@ function sparaKnapp(e){
     }
   }
   
-  if (antal < antalTärningar - 1){
+  if (antal == antalTärningar - 1){
     bNyttSlag.elt.disabled = false;
   }
   else{
