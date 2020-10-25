@@ -137,15 +137,15 @@ function sparaKnapp(e){
   for (let i = 0; i < antalTärningar; i++){
     if (sparaKnappar[i].checked() == true){
       antal ++;
-      console.log(antal);
+      //console.log(antal);
     }
   }
   
   if (antal == antalTärningar - 1){
-    bNyttSlag.elt.disabled = false;
+    bNyttSlag.elt.disabled = true;
   }
   else{
-    bNyttSlag.elt.disabled = true;
+    bNyttSlag.elt.disabled = false;
   }
 }
 
