@@ -330,8 +330,8 @@ function rollDicesKlart(){
       }
 
     }
-    console.log(markerade.length, slag);
-    if (markerade.length < antalTärningar || slag == 1){
+    console.log('markerade', markerade.length, slag);
+    if (sparaLika.checked() == false || markerade.length < antalTärningar){
       bNyttSlag.elt.disabled = false;
     }
   }
