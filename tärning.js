@@ -5,6 +5,7 @@ function tärning(x, y){
 
   this.rulla = function(){
     this.prickar = floor(random(1,7));
+    this.prickar = 6;
   }
 
   this.rita = function(i){
