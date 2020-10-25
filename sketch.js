@@ -124,6 +124,26 @@ function setup() {
 
 function sparaKnapp(e){
   //console.log(this.checked());
+  let antal = 0;
+  for (let i = 0; i < antalTärningar; i++){
+    if (sparaLika.checked() == true && !this.checked()){
+      if (this.id != i && tärningar[i].prickar == tärningar[this.id].prickar){
+        sparaKnappar[i].checked(true);
+      }
+    }
+    if (sparaKnappar[i].checked(true)){
+      antal ++;
+    }
+  }
+  if (antal < antalTärningar){
+    bNyttSlag.elt.disabled = false;
+  }
+  else{
+    bNyttSlag.elt.disabled = true;
+  }
+}
+  
+  /*
   if (sparaLika.checked() == true && !this.checked()){
     for (let i = 0; i < antalTärningar; i++){
       if (this.id != i && tärningar[i].prickar == tärningar[this.id].prickar){
@@ -131,7 +151,7 @@ function sparaKnapp(e){
       }
     }
   }
-}
+  */
 
 function ritaStatistik(){
   //console.log('ritaStatistik');
