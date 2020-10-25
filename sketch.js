@@ -125,17 +125,21 @@ function setup() {
 function sparaKnapp(e){
   //console.log(this.checked());
   let antal = 0;
-  for (let i = 0; i < antalTärningar; i++){
-    if (sparaLika.checked() == true && !this.checked()){
+  if (sparaLika.checked() == true && !this.checked()){
+    for (let i = 0; i < antalTärningar; i++){
       if (this.id != i && tärningar[i].prickar == tärningar[this.id].prickar){
         sparaKnappar[i].checked(true);
       }
     }
+  }
+  
+  for (let i = 0; i < antalTärningar; i++){
     if (sparaKnappar[i].checked()){
       antal ++;
       console.log(antal);
     }
   }
+  
   if (antal < antalTärningar){
     bNyttSlag.elt.disabled = false;
   }
