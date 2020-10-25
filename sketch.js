@@ -298,7 +298,7 @@ function rollDicesKlart(){
     }
   }
   ritaStatistik();
-  bNyttSlag.elt.disabled = false;
+  
   for (let i = 0; i < antalTärningar; i++){
       sparaKnappar[i].elt.firstElementChild.disabled = false;
   }
@@ -329,6 +329,11 @@ function rollDicesKlart(){
         }
       }
     }
+  }
+  
+  console.log(markerade.length);
+  if (markerade.length < antalTärningar){
+    bNyttSlag.elt.disabled = false;
   }
 
   if (slag == 1){
