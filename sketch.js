@@ -300,7 +300,7 @@ function rollDicesKlart(){
   ritaStatistik();
   
   for (let i = 0; i < antalTärningar; i++){
-      sparaKnappar[i].elt.firstElementChild.disabled = false;
+    sparaKnappar[i].elt.firstElementChild.disabled = false;
   }
 
   if (sparaLika.checked() == true && slag < 3){
@@ -328,12 +328,12 @@ function rollDicesKlart(){
           }
         }
       }
+
     }
-  }
-  
-  console.log(markerade.length);
-  if (markerade.length < antalTärningar){
-    bNyttSlag.elt.disabled = false;
+    console.log(markerade.length);
+    if (markerade.length < antalTärningar){
+      bNyttSlag.elt.disabled = false;
+    }
   }
 
   if (slag == 1){
@@ -346,7 +346,8 @@ function rollDicesKlart(){
       sparaKnappar[i].elt.firstElementChild.disabled = true;
     }
   }
-}
+  
+}//rollDicesKlart
 
 function nyttSlag(e){
   if (rolling){
