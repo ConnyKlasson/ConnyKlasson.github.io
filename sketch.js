@@ -67,6 +67,7 @@ function setup() {
   sparaLika = createCheckbox("");
   sparaLika.position(420, 300);
   sparaLika.elt.firstElementChild.style="width:30px; height:30px; ";
+  sparaLika.checked(true);
 
   bNyttSlag = createButton("Slag 1");
   bNyttSlag.mouseReleased(nyttSlag);
