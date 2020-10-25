@@ -123,7 +123,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  console.log(this.checked(), e);
+  //console.log(this.checked(), e);
   
   if (sparaLika.checked() == true && !this.checked()){
     for (let i = 0; i < antalTärningar; i++){
@@ -141,7 +141,7 @@ function sparaKnapp(e){
     }
   }
   
-  if (antal == antalTärningar - 1){
+  if (this.checked() == false && antal == antalTärningar - 1){
     bNyttSlag.elt.disabled = true;
   }
   else{
@@ -282,9 +282,6 @@ const callback = (millis) => {
 function rollDices(){
     //console.log('rollDices 3');
   for (let i = 0; i < antalTärningar; i++){
-    //if (slag == 1){
-    //  sparaKnappar[i].elt.firstElementChild.disabled = false;
-    //}
       if (sparaKnappar[i].checked() == false){
         tärningar[i].rulla();
         tärningar[i].rita(i);
