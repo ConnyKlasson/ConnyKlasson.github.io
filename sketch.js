@@ -123,7 +123,7 @@ function setup() {
 }
 
 function sparaKnapp(e){
-  //console.log(this.checked(), e);
+  console.log(this.checked(), e);
   
   if (sparaLika.checked() == true && !this.checked()){
     for (let i = 0; i < antalTärningar; i++){
